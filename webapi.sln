@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.WebApi", "webapi\src\MyNihongo.WebApi\MyNihongo.WebApi.csproj", "{A72AEBC3-77D6-41D3-82FA-28CC53547CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNihongo.WebApi.Infrastructure", "webapi\src\MyNihongo.WebApi.Infrastructure\MyNihongo.WebApi.Infrastructure.csproj", "{7FE84CEA-F02A-456B-8F10-801A59F242DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A72AEBC3-77D6-41D3-82FA-28CC53547CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72AEBC3-77D6-41D3-82FA-28CC53547CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72AEBC3-77D6-41D3-82FA-28CC53547CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72AEBC3-77D6-41D3-82FA-28CC53547CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC0FE73C-9381-4701-8272-F0DF1D63784E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.AspNetCore" Version="2.42.0" />
+		<PackageReference Include="Grpc.AspNetCore.Web" Version="2.42.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MyNihongo.WebApi.Infrastructure\MyNihongo.WebApi.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\..\..\proto\*.proto" GrpcServices="Server">
+			<Link>Protos\%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Protobuf>
+	</ItemGroup>
+
+</Project>
