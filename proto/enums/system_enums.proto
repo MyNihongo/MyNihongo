@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure";
+
+package system;
+
+enum Language {
+	UNDEFINED = 0;
+	ENGLISH = 1;
+	DUTCH = 2;
+	FRENCH = 3;
+	GERMAN = 4;
+	HUNGARIAN = 5;
+	RUSSIAN = 6;
+	SLOVENIAN = 7;
+	SPANISH = 8;
+	SWEDISH = 9;
+	PORTUGUESE = 10;
+}

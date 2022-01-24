@@ -5,7 +5,17 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.WebApi", "webapi\src\MyNihongo.WebApi\MyNihongo.WebApi.csproj", "{A72AEBC3-77D6-41D3-82FA-28CC53547CF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNihongo.WebApi.Infrastructure", "webapi\src\MyNihongo.WebApi.Infrastructure\MyNihongo.WebApi.Infrastructure.csproj", "{7FE84CEA-F02A-456B-8F10-801A59F242DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.WebApi.Infrastructure", "webapi\src\MyNihongo.WebApi.Infrastructure\MyNihongo.WebApi.Infrastructure.csproj", "{7FE84CEA-F02A-456B-8F10-801A59F242DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{EA035CAB-A936-4FDD-AB1D-BEB2F696B9CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.Migrations", "webapi\src\MyNihongo.Migrations\MyNihongo.Migrations.csproj", "{261DA547-B59F-4324-9783-5707F66D7958}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.Migrations.Cli", "webapi\src\MyNihongo.Migrations.Cli\MyNihongo.Migrations.Cli.csproj", "{20B114DF-9DAD-4EEB-9D77-3C2F76393DB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_src-gen", "_src-gen", "{1A4B57EB-7443-4B08-87BC-8F9CD0D60DE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.SrcGen.Migrations", "webapi\src-gen\MyNihongo.SrcGen.Migrations\MyNihongo.SrcGen.Migrations.csproj", "{DE1B950B-40AC-4CEF-8670-6B2035DF0124}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +31,26 @@ Global
 		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE84CEA-F02A-456B-8F10-801A59F242DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261DA547-B59F-4324-9783-5707F66D7958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261DA547-B59F-4324-9783-5707F66D7958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261DA547-B59F-4324-9783-5707F66D7958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261DA547-B59F-4324-9783-5707F66D7958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B114DF-9DAD-4EEB-9D77-3C2F76393DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B114DF-9DAD-4EEB-9D77-3C2F76393DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B114DF-9DAD-4EEB-9D77-3C2F76393DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B114DF-9DAD-4EEB-9D77-3C2F76393DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1B950B-40AC-4CEF-8670-6B2035DF0124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1B950B-40AC-4CEF-8670-6B2035DF0124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1B950B-40AC-4CEF-8670-6B2035DF0124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1B950B-40AC-4CEF-8670-6B2035DF0124}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{261DA547-B59F-4324-9783-5707F66D7958} = {EA035CAB-A936-4FDD-AB1D-BEB2F696B9CA}
+		{20B114DF-9DAD-4EEB-9D77-3C2F76393DB0} = {EA035CAB-A936-4FDD-AB1D-BEB2F696B9CA}
+		{DE1B950B-40AC-4CEF-8670-6B2035DF0124} = {1A4B57EB-7443-4B08-87BC-8F9CD0D60DE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC0FE73C-9381-4701-8272-F0DF1D63784E}
