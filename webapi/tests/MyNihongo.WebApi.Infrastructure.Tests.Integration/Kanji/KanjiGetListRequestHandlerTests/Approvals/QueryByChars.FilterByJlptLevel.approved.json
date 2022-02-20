@@ -1,0 +1,51 @@
+﻿[
+	{
+		"KanjiId": 8,
+		"SortingOrder": 2,
+		"Character": "八",
+		"JlptLevel": "N5",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "や",
+				"SecondaryText": "",
+				"RomajiText": "ya"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ハチ",
+				"SecondaryText": "",
+				"RomajiText": "hachi"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ハツ",
+				"SecondaryText": "",
+				"RomajiText": "hatsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "や",
+				"SecondaryText": "つ",
+				"RomajiText": "yatsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やっ",
+				"SecondaryText": "つ",
+				"RomajiText": "yattsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "よう",
+				"SecondaryText": "",
+				"RomajiText": "you"
+			}
+		],
+		"Meanings": [
+			"eight",
+			"eight radical (no. 12)"
+		]
+	}
+]

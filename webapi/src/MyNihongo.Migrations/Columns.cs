@@ -1,6 +1,6 @@
 ﻿namespace MyNihongo.Migrations;
 
-internal static class Columns
+public static class Columns
 {
 	public static class Core
 	{
@@ -8,6 +8,13 @@ internal static class Columns
 		{
 			public const string LanguageId = "langID",
 				Code = "code";
+		}
+
+		public static class User
+		{
+			public const string UserId = "userID",
+				EmailHash = "emailHash",
+				PasswordHash = "passwordHash";
 		}
 	}
 
@@ -28,7 +35,7 @@ internal static class Columns
 			public const string KanjiId = MasterData.KanjiId,
 				MainText = "main",
 				SecondaryText = "secondary",
-				SorrintOrder = "sorting",
+				SortingOrder = "sorting",
 				ReadingType = "type",
 				Romaji = "romaji";
 		}
@@ -39,6 +46,18 @@ internal static class Columns
 				LanguageId = Lang.LanguageId,
 				Text = "text",
 				SortingOrder = "sorting";
+		}
+
+		public static class UserEntry
+		{
+			public const string UserId = User.UserId,
+				KanjiId = MasterData.KanjiId,
+				FavouriteRating = "rating",
+				Notes = "notes",
+				Mark = "mark",
+				IsDeleted = "isDeleted",
+				TicksLastAccessed = "ticksLastAccessed",
+				TicksModified = "ticksModified";
 		}
 	}
 }

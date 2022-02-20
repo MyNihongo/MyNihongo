@@ -1,0 +1,38 @@
+﻿[
+	{
+		"KanjiId": 15,
+		"SortingOrder": 1,
+		"Character": "願",
+		"JlptLevel": "N3",
+		"UserData": {
+			"FavouriteRating": 0.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ガン",
+				"SecondaryText": "",
+				"RomajiText": "gan"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねが",
+				"SecondaryText": "う",
+				"RomajiText": "negau"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねがい",
+				"SecondaryText": "",
+				"RomajiText": "neko"
+			}
+		],
+		"Meanings": [
+			"petition",
+			"request",
+			"vow",
+			"wish",
+			"hope"
+		]
+	}
+]

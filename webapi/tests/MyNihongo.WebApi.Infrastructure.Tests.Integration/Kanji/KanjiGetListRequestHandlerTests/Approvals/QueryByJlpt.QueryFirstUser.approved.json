@@ -1,0 +1,371 @@
+﻿[
+	{
+		"KanjiId": 6,
+		"SortingOrder": 0,
+		"Character": "見",
+		"JlptLevel": "N5",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "み",
+				"SecondaryText": "る",
+				"RomajiText": "miru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ケン",
+				"SecondaryText": "",
+				"RomajiText": "ken"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "み",
+				"SecondaryText": "える",
+				"RomajiText": "mieru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "み",
+				"SecondaryText": "せる",
+				"RomajiText": "miseru"
+			}
+		],
+		"Meanings": [
+			"see",
+			"hopes",
+			"chances",
+			"idea",
+			"opinion",
+			"look at"
+		]
+	},
+	{
+		"KanjiId": 5,
+		"SortingOrder": 1,
+		"Character": "飲",
+		"JlptLevel": "N5",
+		"UserData": {
+			"FavouriteRating": 0.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "イン",
+				"SecondaryText": "",
+				"RomajiText": "iso"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "の",
+				"SecondaryText": "む",
+				"RomajiText": "nomu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "オン",
+				"SecondaryText": "",
+				"RomajiText": "oso"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "の",
+				"SecondaryText": "み",
+				"RomajiText": "nomi"
+			}
+		],
+		"Meanings": [
+			"drink",
+			"smoke",
+			"take"
+		]
+	},
+	{
+		"KanjiId": 8,
+		"SortingOrder": 2,
+		"Character": "八",
+		"JlptLevel": "N5",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ハチ",
+				"SecondaryText": "",
+				"RomajiText": "hachi"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "や",
+				"SecondaryText": "",
+				"RomajiText": "ya"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "や",
+				"SecondaryText": "つ",
+				"RomajiText": "yatsu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ハツ",
+				"SecondaryText": "",
+				"RomajiText": "hatsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やっ",
+				"SecondaryText": "つ",
+				"RomajiText": "yattsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "よう",
+				"SecondaryText": "",
+				"RomajiText": "you"
+			}
+		],
+		"Meanings": [
+			"eight",
+			"eight radical (no. 12)"
+		]
+	},
+	{
+		"KanjiId": 7,
+		"SortingOrder": 3,
+		"Character": "休",
+		"JlptLevel": "N5",
+		"UserData": {
+			"FavouriteRating": 0.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "キュウ",
+				"SecondaryText": "",
+				"RomajiText": "kyuu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "む",
+				"RomajiText": "yasumu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "まる",
+				"RomajiText": "yasumaru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "める",
+				"RomajiText": "yasumeru"
+			}
+		],
+		"Meanings": [
+			"rest",
+			"day off",
+			"retire",
+			"sleep"
+		]
+	},
+	{
+		"KanjiId": 11,
+		"SortingOrder": 0,
+		"Character": "説",
+		"JlptLevel": "N4",
+		"UserData": {
+			"FavouriteRating": 5.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "セツ",
+				"SecondaryText": "",
+				"RomajiText": "setsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "と",
+				"SecondaryText": "く",
+				"RomajiText": "toku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゼイ",
+				"SecondaryText": "",
+				"RomajiText": "zei"
+			}
+		],
+		"Meanings": [
+			"opinion",
+			"theory",
+			"explanation",
+			"rumor"
+		]
+	},
+	{
+		"KanjiId": 12,
+		"SortingOrder": 1,
+		"Character": "歩",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ホ",
+				"SecondaryText": "",
+				"RomajiText": "ho"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ある",
+				"SecondaryText": "く",
+				"RomajiText": "aruku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ブ",
+				"SecondaryText": "",
+				"RomajiText": "bu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "あゆ",
+				"SecondaryText": "む",
+				"RomajiText": "ayumu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "フ",
+				"SecondaryText": "",
+				"RomajiText": "fu"
+			}
+		],
+		"Meanings": [
+			"walk",
+			"counter for steps"
+		]
+	},
+	{
+		"KanjiId": 10,
+		"SortingOrder": 2,
+		"Character": "夏",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "カ",
+				"SecondaryText": "",
+				"RomajiText": "ka"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "なつ",
+				"SecondaryText": "",
+				"RomajiText": "natsu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガ",
+				"SecondaryText": "",
+				"RomajiText": "ga"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゲ",
+				"SecondaryText": "",
+				"RomajiText": "ge"
+			}
+		],
+		"Meanings": [
+			"summer"
+		]
+	},
+	{
+		"KanjiId": 9,
+		"SortingOrder": 3,
+		"Character": "元",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ゲン",
+				"SecondaryText": "",
+				"RomajiText": "gen"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "もと",
+				"SecondaryText": "",
+				"RomajiText": "moto"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガン",
+				"SecondaryText": "",
+				"RomajiText": "gan"
+			}
+		],
+		"Meanings": [
+			"beginning",
+			"former time",
+			"origin"
+		]
+	},
+	{
+		"KanjiId": 13,
+		"SortingOrder": 0,
+		"Character": "婚",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "コン",
+				"SecondaryText": "",
+				"RomajiText": "kon"
+			}
+		],
+		"Meanings": [
+			"marriage"
+		]
+	},
+	{
+		"KanjiId": 15,
+		"SortingOrder": 1,
+		"Character": "願",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ガン",
+				"SecondaryText": "",
+				"RomajiText": "gan"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねが",
+				"SecondaryText": "う",
+				"RomajiText": "negau"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねがい",
+				"SecondaryText": "",
+				"RomajiText": "neko"
+			}
+		],
+		"Meanings": [
+			"petition",
+			"request",
+			"vow",
+			"wish",
+			"hope"
+		]
+	}
+]

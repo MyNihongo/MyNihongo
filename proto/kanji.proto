@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Kanji";
+
+package kanji;
+import "messages/kanji_types.proto";
+
+service KanjiRpc {
+	rpc GetList (.kanji.KanjiGetListRequest) returns (stream .kanji.KanjiGetListResponse);
+}

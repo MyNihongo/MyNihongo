@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Kanji";
+
+package kanji;
+import "enums/kanji_enums.proto";
+import "enums/system_enums.proto";
+
+message KanjiReading {
+	.kanji.KanjiReadingType readingType = 1;
+	string mainText = 2;
+	string secondaryText = 3;
+	string romajiText = 4;
+}
+
+// GetList
+message KanjiGetListRequest {
+	.system.JlptLevel jlptLevel = 1;
+	Filter filter = 2;
+	.system.Language language = 3;
+	string searchText = 4;
+	int32 pageIndex = 5;
+	int32 pageSize = 6;
+
+	enum Filter {
+		NONE = 0;
+		USER_DATA = 1;
+		FAVOURITES = 2;
+	}
+}
+
+message KanjiGetListResponse {
+	int32 kanjiId = 1;
+	int32 sortingOrder = 2;
+	string character = 3;
+	.system.JlptLevel jlptLevel = 4;
+	UserData userData = 5;
+	repeated KanjiReading readings = 6;
+	repeated string meanings = 7;
+
+	message UserData {
+		double favouriteRating = 1;
+	}
+}

@@ -1,0 +1,121 @@
+﻿[
+	{
+		"KanjiId": 7,
+		"SortingOrder": 3,
+		"Character": "休",
+		"JlptLevel": "N5",
+		"UserData": {
+			"FavouriteRating": 0.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "キュウ",
+				"SecondaryText": "",
+				"RomajiText": "kyuu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "む",
+				"RomajiText": "yasumu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "まる",
+				"RomajiText": "yasumaru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "める",
+				"RomajiText": "yasumeru"
+			}
+		],
+		"Meanings": [
+			"rest",
+			"day off",
+			"retire",
+			"sleep"
+		]
+	},
+	{
+		"KanjiId": 11,
+		"SortingOrder": 0,
+		"Character": "説",
+		"JlptLevel": "N4",
+		"UserData": {
+			"FavouriteRating": 5.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "セツ",
+				"SecondaryText": "",
+				"RomajiText": "setsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "と",
+				"SecondaryText": "く",
+				"RomajiText": "toku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゼイ",
+				"SecondaryText": "",
+				"RomajiText": "zei"
+			}
+		],
+		"Meanings": [
+			"opinion",
+			"theory",
+			"explanation",
+			"rumor"
+		]
+	},
+	{
+		"KanjiId": 12,
+		"SortingOrder": 1,
+		"Character": "歩",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "ある",
+				"SecondaryText": "く",
+				"RomajiText": "aruku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ホ",
+				"SecondaryText": "",
+				"RomajiText": "ho"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ブ",
+				"SecondaryText": "",
+				"RomajiText": "bu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "あゆ",
+				"SecondaryText": "む",
+				"RomajiText": "ayumu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "フ",
+				"SecondaryText": "",
+				"RomajiText": "fu"
+			}
+		],
+		"Meanings": [
+			"walk",
+			"counter for steps"
+		]
+	}
+]

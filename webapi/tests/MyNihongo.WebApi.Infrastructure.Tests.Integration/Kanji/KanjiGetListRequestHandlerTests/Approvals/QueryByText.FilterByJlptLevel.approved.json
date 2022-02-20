@@ -1,0 +1,43 @@
+﻿[
+	{
+		"KanjiId": 6,
+		"SortingOrder": 0,
+		"Character": "見",
+		"JlptLevel": "N5",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "み",
+				"SecondaryText": "る",
+				"RomajiText": "miru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ケン",
+				"SecondaryText": "",
+				"RomajiText": "ken"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "み",
+				"SecondaryText": "える",
+				"RomajiText": "mieru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "み",
+				"SecondaryText": "せる",
+				"RomajiText": "miseru"
+			}
+		],
+		"Meanings": [
+			"see",
+			"hopes",
+			"chances",
+			"idea",
+			"opinion",
+			"look at"
+		]
+	}
+]

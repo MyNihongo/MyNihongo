@@ -1,0 +1,163 @@
+﻿[
+	{
+		"KanjiId": 5,
+		"SortingOrder": 1,
+		"Character": "飲",
+		"JlptLevel": "N5",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "の",
+				"SecondaryText": "む",
+				"RomajiText": "nomu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "イン",
+				"SecondaryText": "",
+				"RomajiText": "iso"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "オン",
+				"SecondaryText": "",
+				"RomajiText": "oso"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "の",
+				"SecondaryText": "み",
+				"RomajiText": "nomi"
+			}
+		],
+		"Meanings": [
+			"drink",
+			"smoke",
+			"take"
+		]
+	},
+	{
+		"KanjiId": 10,
+		"SortingOrder": 2,
+		"Character": "夏",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "カ",
+				"SecondaryText": "",
+				"RomajiText": "ka"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "なつ",
+				"SecondaryText": "",
+				"RomajiText": "natsu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガ",
+				"SecondaryText": "",
+				"RomajiText": "ga"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゲ",
+				"SecondaryText": "",
+				"RomajiText": "ge"
+			}
+		],
+		"Meanings": [
+			"summer"
+		]
+	},
+	{
+		"KanjiId": 15,
+		"SortingOrder": 1,
+		"Character": "願",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ガン",
+				"SecondaryText": "",
+				"RomajiText": "gan"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねが",
+				"SecondaryText": "う",
+				"RomajiText": "negau"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねがい",
+				"SecondaryText": "",
+				"RomajiText": "neko"
+			}
+		],
+		"Meanings": [
+			"petition",
+			"request",
+			"vow",
+			"wish",
+			"hope"
+		]
+	},
+	{
+		"KanjiId": 17,
+		"SortingOrder": 1,
+		"Character": "針",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "シン",
+				"SecondaryText": "",
+				"RomajiText": "shin"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "はり",
+				"SecondaryText": "",
+				"RomajiText": "hari"
+			}
+		],
+		"Meanings": [
+			"needle",
+			"pin",
+			"staple",
+			"stinger"
+		]
+	},
+	{
+		"KanjiId": 22,
+		"SortingOrder": 1,
+		"Character": "餓",
+		"JlptLevel": "N1",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "う",
+				"SecondaryText": "える",
+				"RomajiText": "ueru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガ",
+				"SecondaryText": "",
+				"RomajiText": "ga"
+			}
+		],
+		"Meanings": [
+			"starve",
+			"hungry",
+			"thirst"
+		]
+	}
+]

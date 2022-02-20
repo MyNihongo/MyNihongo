@@ -1,0 +1,146 @@
+﻿[
+	{
+		"KanjiId": 11,
+		"SortingOrder": 0,
+		"Character": "説",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "セツ",
+				"SecondaryText": "",
+				"RomajiText": "setsu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "と",
+				"SecondaryText": "く",
+				"RomajiText": "toku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゼイ",
+				"SecondaryText": "",
+				"RomajiText": "zei"
+			}
+		],
+		"Meanings": [
+			"théorie",
+			"rumeur",
+			"opinion",
+			"thèse"
+		]
+	},
+	{
+		"KanjiId": 12,
+		"SortingOrder": 1,
+		"Character": "歩",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "ある",
+				"SecondaryText": "く",
+				"RomajiText": "aruku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ホ",
+				"SecondaryText": "",
+				"RomajiText": "ho"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "あゆ",
+				"SecondaryText": "む",
+				"RomajiText": "ayumu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ブ",
+				"SecondaryText": "",
+				"RomajiText": "bu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "フ",
+				"SecondaryText": "",
+				"RomajiText": "fu"
+			}
+		],
+		"Meanings": [
+			"marcher",
+			"compteur de pas"
+		]
+	},
+	{
+		"KanjiId": 10,
+		"SortingOrder": 2,
+		"Character": "夏",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "なつ",
+				"SecondaryText": "",
+				"RomajiText": "natsu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "カ",
+				"SecondaryText": "",
+				"RomajiText": "ka"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガ",
+				"SecondaryText": "",
+				"RomajiText": "ga"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゲ",
+				"SecondaryText": "",
+				"RomajiText": "ge"
+			}
+		],
+		"Meanings": [
+			"été"
+		]
+	},
+	{
+		"KanjiId": 9,
+		"SortingOrder": 3,
+		"Character": "元",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ゲン",
+				"SecondaryText": "",
+				"RomajiText": "gen"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "もと",
+				"SecondaryText": "",
+				"RomajiText": "moto"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガン",
+				"SecondaryText": "",
+				"RomajiText": "gan"
+			}
+		],
+		"Meanings": [
+			"commencement",
+			"origine",
+			"ancien temps"
+		]
+	}
+]

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Kanji";
+
+package kanji;
+
+enum KanjiReadingType {
+	UNDEFINED_READING_TYPE = 0;
+	KUN = 1;
+	ON = 2;
+}

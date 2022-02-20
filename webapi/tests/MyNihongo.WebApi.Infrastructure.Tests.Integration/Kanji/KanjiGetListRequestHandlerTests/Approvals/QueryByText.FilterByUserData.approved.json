@@ -1,0 +1,43 @@
+﻿[
+	{
+		"KanjiId": 7,
+		"SortingOrder": 3,
+		"Character": "休",
+		"JlptLevel": "N5",
+		"UserData": {
+			"FavouriteRating": 0.0
+		},
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "キュウ",
+				"SecondaryText": "",
+				"RomajiText": "kyuu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "む",
+				"RomajiText": "yasumu"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "まる",
+				"RomajiText": "yasumaru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "やす",
+				"SecondaryText": "める",
+				"RomajiText": "yasumeru"
+			}
+		],
+		"Meanings": [
+			"rest",
+			"day off",
+			"retire",
+			"sleep"
+		]
+	}
+]

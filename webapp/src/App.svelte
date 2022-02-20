@@ -1,29 +1,18 @@
 <script lang="ts">
-	import { GreeterClient } from "./proto/GreetServiceClientPb";
-	import { HelloRequest, HelloReply } from "./proto/messages/greet_types_pb";
+	import { KanjiRpcClient } from "./proto/KanjiServiceClientPb";
+	import { KanjiGetListRequest, KanjiGetListResponse } from "./proto/messages/kanji_types_pb";
+	import { readStreamAsync } from "./utils/grpcUtils";
 
 	export let name: string;
 	let output: string = "none so far";
 
-	const client = new GreeterClient("https://localhost:7076");
-	const req = new HelloRequest();
-	req.setName("fuck you");
+	const client = new KanjiRpcClient("https://localhost:7076");
+	const req = new KanjiGetListRequest();
 
 	const onClick = async () => {
-		const stream = client.sayManyHellos(req, {});
-
-		const onEnd = () => {
-			stream.removeListener("data", onHello);
-			stream.removeListener("end", onEnd);
-			stream.cancel();
-		};
-
-		stream.on("data", onHello);
-		stream.on("end", onEnd);
-
-		function onHello(x: HelloReply) {
-			console.log(x.getMessage());
-		}
+		const stream = client.getList(req, {});
+		const res = await readStreamAsync<KanjiGetListResponse>(stream)
+		console.log(res)
 	};
 </script>
 

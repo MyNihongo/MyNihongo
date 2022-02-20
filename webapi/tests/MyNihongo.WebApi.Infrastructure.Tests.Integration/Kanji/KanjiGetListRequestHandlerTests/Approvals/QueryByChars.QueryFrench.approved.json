@@ -1,0 +1,65 @@
+﻿[
+	{
+		"KanjiId": 10,
+		"SortingOrder": 2,
+		"Character": "夏",
+		"JlptLevel": "N4",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "カ",
+				"SecondaryText": "",
+				"RomajiText": "ka"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "なつ",
+				"SecondaryText": "",
+				"RomajiText": "natsu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガ",
+				"SecondaryText": "",
+				"RomajiText": "ga"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ゲ",
+				"SecondaryText": "",
+				"RomajiText": "ge"
+			}
+		],
+		"Meanings": [
+			"été"
+		]
+	},
+	{
+		"KanjiId": 18,
+		"SortingOrder": 0,
+		"Character": "個",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "コ",
+				"SecondaryText": "",
+				"RomajiText": "ko"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "カ",
+				"SecondaryText": "",
+				"RomajiText": "ka"
+			}
+		],
+		"Meanings": [
+			"individuel",
+			"privé",
+			"compteur d'articles",
+			"compteur d'unités militaires"
+		]
+	}
+]

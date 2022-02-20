@@ -1,0 +1,121 @@
+﻿[
+	{
+		"KanjiId": 19,
+		"SortingOrder": 2,
+		"Character": "枚",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "マイ",
+				"SecondaryText": "",
+				"RomajiText": "mai"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "バイ",
+				"SecondaryText": "",
+				"RomajiText": "bai"
+			}
+		],
+		"Meanings": [
+			"sheet of...",
+			"counter for flat thin objects or sheets"
+		]
+	},
+	{
+		"KanjiId": 4,
+		"SortingOrder": 1,
+		"Character": "曝",
+		"JlptLevel": "UndefinedJlptLevel",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "さら",
+				"SecondaryText": "す",
+				"RomajiText": "sarasu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "バク",
+				"SecondaryText": "",
+				"RomajiText": "baku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ホク",
+				"SecondaryText": "",
+				"RomajiText": "poku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ボク",
+				"SecondaryText": "",
+				"RomajiText": "boku"
+			}
+		],
+		"Meanings": [
+			"bleach",
+			"refine",
+			"expose",
+			"air"
+		]
+	},
+	{
+		"KanjiId": 3,
+		"SortingOrder": 3,
+		"Character": "黴",
+		"JlptLevel": "UndefinedJlptLevel",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "かび",
+				"SecondaryText": "",
+				"RomajiText": "kabi"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "バイ",
+				"SecondaryText": "",
+				"RomajiText": "bai"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ビ",
+				"SecondaryText": "",
+				"RomajiText": "bi"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "かび",
+				"SecondaryText": "る",
+				"RomajiText": "kabiru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "マイ",
+				"SecondaryText": "",
+				"RomajiText": "mai"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "か",
+				"SecondaryText": "びる",
+				"RomajiText": "kabiru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ミ",
+				"SecondaryText": "",
+				"RomajiText": "mi"
+			}
+		],
+		"Meanings": [
+			"mold",
+			"mildew"
+		]
+	}
+]

@@ -1,0 +1,110 @@
+﻿[
+	{
+		"KanjiId": 18,
+		"SortingOrder": 0,
+		"Character": "個",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "コ",
+				"SecondaryText": "",
+				"RomajiText": "ko"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "カ",
+				"SecondaryText": "",
+				"RomajiText": "ka"
+			}
+		],
+		"Meanings": [
+			"indivíduo",
+			"sufixo para contagem de para artigos"
+		]
+	},
+	{
+		"KanjiId": 17,
+		"SortingOrder": 1,
+		"Character": "針",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "シン",
+				"SecondaryText": "",
+				"RomajiText": "shin"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "はり",
+				"SecondaryText": "",
+				"RomajiText": "hari"
+			}
+		],
+		"Meanings": [
+			"agulha",
+			"alfinete",
+			"grampo",
+			"o que pica"
+		]
+	},
+	{
+		"KanjiId": 19,
+		"SortingOrder": 2,
+		"Character": "枚",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "マイ",
+				"SecondaryText": "",
+				"RomajiText": "mai"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "バイ",
+				"SecondaryText": "",
+				"RomajiText": "bai"
+			}
+		],
+		"Meanings": [
+			"folha de...",
+			"sufixo para contagem de para objetos finos",
+			"chatos ou folhas"
+		]
+	},
+	{
+		"KanjiId": 20,
+		"SortingOrder": 3,
+		"Character": "雲",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ウン",
+				"SecondaryText": "",
+				"RomajiText": "un"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "くも",
+				"SecondaryText": "",
+				"RomajiText": "kumo"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ぐも",
+				"SecondaryText": "",
+				"RomajiText": "gumo"
+			}
+		],
+		"Meanings": [
+			"nuvem"
+		]
+	}
+]

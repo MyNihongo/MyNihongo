@@ -7,16 +7,26 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Google.Protobuf" Version="3.19.3" />
-		<PackageReference Include="Grpc.Tools" Version="2.43.0">
+		<PackageReference Include="Google.Protobuf" Version="3.19.4" />
+		<PackageReference Include="Grpc.Tools" Version="2.44.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.ObjectPool" Version="6.0.2" />
+		<PackageReference Include="MyNihongo.KanaConverter" Version="1.0.1" />
+		<PackageReference Include="MyNihongo.KanaDetector" Version="1.0.1.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Protobuf Include="..\..\..\proto\messages\**\*.proto" GrpcServices="None">
+		<ProjectReference Include="..\..\src-gen\MyNihongo.SrcGen.Infrastructure.Database\MyNihongo.SrcGen.Infrastructure.Database.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\MyNihongo.Database.Abstractions\MyNihongo.Database.Abstractions.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\..\..\proto\messages\*.proto" ProtoRoot="..\..\..\proto" GrpcServices="None">
 			<Link>Protos\%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Protobuf>
 	</ItemGroup>

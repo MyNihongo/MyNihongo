@@ -1,0 +1,297 @@
+﻿[
+	{
+		"KanjiId": 20,
+		"SortingOrder": 3,
+		"Character": "雲",
+		"JlptLevel": "N2",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ウン",
+				"SecondaryText": "",
+				"RomajiText": "un"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "くも",
+				"SecondaryText": "",
+				"RomajiText": "kumo"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ぐも",
+				"SecondaryText": "",
+				"RomajiText": "gumo"
+			}
+		],
+		"Meanings": [
+			"cloud"
+		]
+	},
+	{
+		"KanjiId": 24,
+		"SortingOrder": 0,
+		"Character": "笙",
+		"JlptLevel": "N1",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ショウ",
+				"SecondaryText": "",
+				"RomajiText": "shou"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ふえ",
+				"SecondaryText": "",
+				"RomajiText": "fue"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ソウ",
+				"SecondaryText": "",
+				"RomajiText": "sou"
+			}
+		],
+		"Meanings": [
+			"a reed instrument"
+		]
+	},
+	{
+		"KanjiId": 22,
+		"SortingOrder": 1,
+		"Character": "餓",
+		"JlptLevel": "N1",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "う",
+				"SecondaryText": "える",
+				"RomajiText": "ueru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ガ",
+				"SecondaryText": "",
+				"RomajiText": "ga"
+			}
+		],
+		"Meanings": [
+			"starve",
+			"hungry",
+			"thirst"
+		]
+	},
+	{
+		"KanjiId": 21,
+		"SortingOrder": 2,
+		"Character": "爵",
+		"JlptLevel": "N1",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "シャク",
+				"SecondaryText": "",
+				"RomajiText": "shaku"
+			}
+		],
+		"Meanings": [
+			"baron",
+			"peerage",
+			"court rank"
+		]
+	},
+	{
+		"KanjiId": 23,
+		"SortingOrder": 3,
+		"Character": "癖",
+		"JlptLevel": "N1",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "くせ",
+				"SecondaryText": "",
+				"RomajiText": "kuse"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ヘキ",
+				"SecondaryText": "",
+				"RomajiText": "heki"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "くせ",
+				"SecondaryText": "に",
+				"RomajiText": "kuseni"
+			}
+		],
+		"Meanings": [
+			"mannerism",
+			"habit",
+			"vice",
+			"trait",
+			"fault",
+			"kink"
+		]
+	},
+	{
+		"KanjiId": 2,
+		"SortingOrder": 0,
+		"Character": "劉",
+		"JlptLevel": "UndefinedJlptLevel",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "ころ",
+				"SecondaryText": "す",
+				"RomajiText": "korosu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "リュウ",
+				"SecondaryText": "",
+				"RomajiText": "ryuu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ル",
+				"SecondaryText": "",
+				"RomajiText": "ri"
+			}
+		],
+		"Meanings": [
+			"weapon of war",
+			"logging axe",
+			"kill en masse",
+			"peeling (paint off a wall, etc)"
+		]
+	},
+	{
+		"KanjiId": 4,
+		"SortingOrder": 1,
+		"Character": "曝",
+		"JlptLevel": "UndefinedJlptLevel",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "さら",
+				"SecondaryText": "す",
+				"RomajiText": "sarasu"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "バク",
+				"SecondaryText": "",
+				"RomajiText": "baku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ホク",
+				"SecondaryText": "",
+				"RomajiText": "poku"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ボク",
+				"SecondaryText": "",
+				"RomajiText": "boku"
+			}
+		],
+		"Meanings": [
+			"bleach",
+			"refine",
+			"expose",
+			"air"
+		]
+	},
+	{
+		"KanjiId": 1,
+		"SortingOrder": 2,
+		"Character": "亜",
+		"JlptLevel": "UndefinedJlptLevel",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ア",
+				"SecondaryText": "",
+				"RomajiText": "a"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "つ",
+				"SecondaryText": "ぐ",
+				"RomajiText": "tsugu"
+			}
+		],
+		"Meanings": [
+			"Asia",
+			"rank next",
+			"come after",
+			"-ous"
+		]
+	},
+	{
+		"KanjiId": 3,
+		"SortingOrder": 3,
+		"Character": "黴",
+		"JlptLevel": "UndefinedJlptLevel",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "バイ",
+				"SecondaryText": "",
+				"RomajiText": "bai"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "かび",
+				"SecondaryText": "",
+				"RomajiText": "kabi"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "かび",
+				"SecondaryText": "る",
+				"RomajiText": "kabiru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ビ",
+				"SecondaryText": "",
+				"RomajiText": "bi"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "マイ",
+				"SecondaryText": "",
+				"RomajiText": "mai"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "か",
+				"SecondaryText": "びる",
+				"RomajiText": "kabiru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ミ",
+				"SecondaryText": "",
+				"RomajiText": "mi"
+			}
+		],
+		"Meanings": [
+			"mold",
+			"mildew"
+		]
+	}
+]

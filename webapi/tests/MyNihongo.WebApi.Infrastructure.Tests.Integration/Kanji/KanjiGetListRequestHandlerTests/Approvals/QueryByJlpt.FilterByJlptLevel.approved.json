@@ -1,0 +1,139 @@
+﻿[
+	{
+		"KanjiId": 13,
+		"SortingOrder": 0,
+		"Character": "婚",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "コン",
+				"SecondaryText": "",
+				"RomajiText": "kon"
+			}
+		],
+		"Meanings": [
+			"marriage"
+		]
+	},
+	{
+		"KanjiId": 15,
+		"SortingOrder": 1,
+		"Character": "願",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "On",
+				"MainText": "ガン",
+				"SecondaryText": "",
+				"RomajiText": "gan"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねが",
+				"SecondaryText": "う",
+				"RomajiText": "negau"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねがい",
+				"SecondaryText": "",
+				"RomajiText": "neko"
+			}
+		],
+		"Meanings": [
+			"petition",
+			"request",
+			"vow",
+			"wish",
+			"hope"
+		]
+	},
+	{
+		"KanjiId": 16,
+		"SortingOrder": 2,
+		"Character": "捕",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "と",
+				"SecondaryText": "らえる",
+				"RomajiText": "toraeru"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ホ",
+				"SecondaryText": "",
+				"RomajiText": "ho"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "と",
+				"SecondaryText": "らわれる",
+				"RomajiText": "torawareru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "と",
+				"SecondaryText": "る",
+				"RomajiText": "toru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "とら",
+				"SecondaryText": "える",
+				"RomajiText": "toraeru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "とら",
+				"SecondaryText": "われる",
+				"RomajiText": "torawareru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "つか",
+				"SecondaryText": "まえる",
+				"RomajiText": "tsukamaeru"
+			},
+			{
+				"ReadingType": "Kun",
+				"MainText": "つか",
+				"SecondaryText": "まる",
+				"RomajiText": "tsukamaru"
+			}
+		],
+		"Meanings": [
+			"catch",
+			"capture"
+		]
+	},
+	{
+		"KanjiId": 14,
+		"SortingOrder": 3,
+		"Character": "猫",
+		"JlptLevel": "N3",
+		"UserData": null,
+		"Readings": [
+			{
+				"ReadingType": "Kun",
+				"MainText": "ねこ",
+				"SecondaryText": "",
+				"RomajiText": "neko"
+			},
+			{
+				"ReadingType": "On",
+				"MainText": "ビョウ",
+				"SecondaryText": "",
+				"RomajiText": "byou"
+			}
+		],
+		"Meanings": [
+			"cat"
+		]
+	}
+]

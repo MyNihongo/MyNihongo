@@ -5,7 +5,7 @@ option csharp_namespace = "MyNihongo.WebApi.Infrastructure";
 package system;
 
 enum Language {
-	UNDEFINED = 0;
+	UNDEFINED_LANGUAGE = 0;
 	ENGLISH = 1;
 	DUTCH = 2;
 	FRENCH = 3;
@@ -16,4 +16,13 @@ enum Language {
 	SPANISH = 8;
 	SWEDISH = 9;
 	PORTUGUESE = 10;
+}
+
+enum JlptLevel {
+	UNDEFINED_JLPT_LEVEL = 0;
+	N1 = 1;
+	N2 = 2;
+	N3 = 3;
+	N4 = 4;
+	N5 = 5;
 }

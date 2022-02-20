@@ -16,7 +16,7 @@ public static class WebApplicationEx
 
 	private static void MapGrpcServices(this IEndpointRouteBuilder @this)
 	{
-		MapGrpcService<GreeterService>(@this);
+		MapGrpcService<KanjiController>(@this);
 
 		static void MapGrpcService<T>(IEndpointRouteBuilder @this)
 			where T : class

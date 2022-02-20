@@ -8,8 +8,11 @@ Remove-Item -Path "$webappDst\*" -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Path $webappDst -Force
 
 try {
-	protoc messages/*.proto --js_out=import_style=commonjs:"$webappDst" --grpc-web_out=import_style=typescript,mode=grpcwebtext:"$webappDst"
-	protoc *.proto --js_out=import_style=commonjs:"$webappDst" --grpc-web_out=import_style=typescript,mode=grpcwebtext:"$webappDst"
+	$paths = "enums/", "messages/", ""
+	foreach ($path in $paths) {
+		$params = "$path*.proto", "--js_out=import_style=commonjs:""$webappDst""", "--grpc-web_out=import_style=typescript,mode=grpcwebtext:""$webappDst"""
+		& "protoc" $params
+	}
 
 	# js generates empty messages in the root
 	foreach ($item in Get-ChildItem -Path $webappDst -Filter *_pb.*) {

@@ -8,7 +8,7 @@ internal static class TypeSymbolEx
 		{
 			var props = @this.GetMembers()
 				.OfType<IPropertySymbol>()
-				.Where(x => x.DeclaredAccessibility != Accessibility.Private);
+				.Where(static x => x.DeclaredAccessibility == Accessibility.Public);
 
 			foreach (var prop in props)
 				yield return prop;
