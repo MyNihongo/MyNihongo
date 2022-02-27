@@ -1,7 +1,7 @@
 /*
 	Query kanji by the JLPT level
 
-	-- Sample:
+	-- Sample
 	EXEC spKanjiQueryByJlpt
 		@jlptLevel = NULL,
 		@filterID = NULL,
@@ -10,6 +10,7 @@
 		@pageIndex = 0,
 		@pageSize = 35
 */
+
 IF (OBJECT_ID('spKanjiQueryByJlpt') IS NOT NULL)
 	DROP PROCEDURE spKanjiQueryByJlpt
 GO

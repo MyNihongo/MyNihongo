@@ -2,10 +2,15 @@
 
 internal abstract record KanjiGetListBaseParams : PaginationBaseParams
 {
-	private readonly Language _language;
+	private readonly JlptLevel? _jlptLevel;
+	private readonly Language _language = WebApiConst.DefaultLanguage;
 
 	[Param("jlptLevel")]
-	public JlptLevel? JlptLevel { get; init; }
+	public JlptLevel? JlptLevel
+	{
+		get => _jlptLevel;
+		init => _jlptLevel = value != Infrastructure.JlptLevel.UndefinedJlptLevel ? value : null;
+	}
 
 	[Param("filterID")]
 	public KanjiGetListRequest.Types.Filter Filter { get; init; }
@@ -17,7 +22,7 @@ internal abstract record KanjiGetListBaseParams : PaginationBaseParams
 		init
 		{
 			if (value == Language.UndefinedLanguage)
-				value = Language.English;
+				value = WebApiConst.DefaultLanguage;
 
 			_language = value;
 		}

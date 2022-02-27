@@ -1,0 +1,52 @@
+﻿[
+	{
+		"UserId": 1,
+		"KanjiId": 5,
+		"FavouriteRating": 0,
+		"Notes": "",
+		"Mark": 0,
+		"IsDeleted": false,
+		"TicksLastAccessed": 0,
+		"TicksModified": 0
+	},
+	{
+		"UserId": 1,
+		"KanjiId": 7,
+		"FavouriteRating": 0,
+		"Notes": "",
+		"Mark": 0,
+		"IsDeleted": false,
+		"TicksLastAccessed": 0,
+		"TicksModified": 0
+	},
+	{
+		"UserId": 1,
+		"KanjiId": 8,
+		"FavouriteRating": 10,
+		"Notes": "",
+		"Mark": 0,
+		"IsDeleted": true,
+		"TicksLastAccessed": 0,
+		"TicksModified": 0
+	},
+	{
+		"UserId": 1,
+		"KanjiId": 11,
+		"FavouriteRating": 50,
+		"Notes": "some user notes",
+		"Mark": 23,
+		"IsDeleted": true,
+		"TicksLastAccessed": 0,
+		"TicksModified": 16458768000000000
+	},
+	{
+		"UserId": 2,
+		"KanjiId": 9,
+		"FavouriteRating": 0,
+		"Notes": "",
+		"Mark": 0,
+		"IsDeleted": false,
+		"TicksLastAccessed": 0,
+		"TicksModified": 0
+	}
+]

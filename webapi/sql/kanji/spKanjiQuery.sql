@@ -1,6 +1,7 @@
 /*
     Internal procedure to output kanji query
 */
+
 IF (OBJECT_ID('spKanjiQuery') IS NOT NULL)
 	DROP PROCEDURE spKanjiQuery
 GO

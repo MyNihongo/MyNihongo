@@ -18,38 +18,29 @@ internal sealed class KanjiGetListRequestHandler : IStreamRequestHandler<KanjiGe
 		await foreach (var kanji in GetKanjiAsync(request, cancellationToken).WithCancellation(cancellationToken))
 		{
 			var userData = kanji.FavouriteRating.HasValue
-				? new KanjiGetListResponse.Types.UserData { FavouriteRating = GetFavouriteRating(kanji.FavouriteRating.Value) }
+				? new KanjiGetListResponse.Types.UserData { FavouriteRating = kanji.FavouriteRating.Value.ToFavouriteRating() }
 				: null;
 
 			var readings = kanji.Readings
-				.Select(static x => new KanjiReading
-				{
-					ReadingType = (KanjiReadingType)x.ReadingType,
-					MainText = x.MainText,
-					SecondaryText = x.SecondaryText,
-					RomajiText = x.RomajiReading
-				});
+				.ToKanjiReading();
 
 			var meanings = kanji.Meanings
-				.Select(static x => x.Text);
+				.ToKanjiMeaning();
 
 			yield return new KanjiGetListResponse
 			{
 				KanjiId = kanji.KanjiId,
 				SortingOrder = kanji.SortingOrder,
 				Character = kanji.Character,
-				JlptLevel = kanji.JlptLevel.HasValue ? (JlptLevel)kanji.JlptLevel.Value : JlptLevel.UndefinedJlptLevel,
+				JlptLevel = kanji.JlptLevel.ToJlptLevel(),
 				UserData = userData,
 				Readings = { readings },
 				Meanings = { meanings }
 			};
 		}
-
-		static double GetFavouriteRating(in byte favouriteRating) =>
-			Math.Round(favouriteRating / 10d, 1);
 	}
 
-	private IAsyncEnumerable<KanjiGetListDatabaseRecord> GetKanjiAsync(KanjiGetListRequest request, CancellationToken ct = default)
+	private IAsyncEnumerable<KanjiGetListResult> GetKanjiAsync(KanjiGetListRequest request, CancellationToken ct = default)
 	{
 		request.SearchText = request.SearchText.TrimEx();
 
@@ -61,7 +52,7 @@ internal sealed class KanjiGetListRequestHandler : IStreamRequestHandler<KanjiGe
 			{
 				var byJlpt = new KanjiGetListByJlptParams
 				{
-					JlptLevel = request.JlptLevel.NullIfDefault(),
+					JlptLevel = request.JlptLevel,
 					Filter = request.Filter,
 					Language = request.Language,
 					UserId = request.UserId,
@@ -80,7 +71,7 @@ internal sealed class KanjiGetListRequestHandler : IStreamRequestHandler<KanjiGe
 			const int maxKanjiLength = 25, minTextLength = 2;
 
 			if (request.SearchText.Length < minTextLength)
-				return AsyncEnumerable.Empty<KanjiGetListDatabaseRecord>();
+				return AsyncEnumerable.Empty<KanjiGetListResult>();
 
 			if (request.Language == Language.UndefinedLanguage)
 				request.Language = Language.English;
@@ -111,7 +102,7 @@ internal sealed class KanjiGetListRequestHandler : IStreamRequestHandler<KanjiGe
 				var byChar = new KanjiGetListByCharParams
 				{
 					Characters = chars,
-					JlptLevel = request.JlptLevel.NullIfDefault(),
+					JlptLevel = request.JlptLevel,
 					Filter = request.Filter,
 					Language = request.Language,
 					UserId = request.UserId,
@@ -130,7 +121,7 @@ internal sealed class KanjiGetListRequestHandler : IStreamRequestHandler<KanjiGe
 				Text = request.SearchText,
 				ByRomaji = byRomaji,
 				ByLanguage = byLanguage,
-				JlptLevel = request.JlptLevel.NullIfDefault(),
+				JlptLevel = request.JlptLevel,
 				Filter = request.Filter,
 				Language = request.Language,
 				UserId = request.UserId,
@@ -141,6 +132,6 @@ internal sealed class KanjiGetListRequestHandler : IStreamRequestHandler<KanjiGe
 			return _kanjiDatabaseService.QueryByTextAsync(byText, ct);
 		}
 
-		return AsyncEnumerable.Empty<KanjiGetListDatabaseRecord>();
+		return AsyncEnumerable.Empty<KanjiGetListResult>();
 	}
 }

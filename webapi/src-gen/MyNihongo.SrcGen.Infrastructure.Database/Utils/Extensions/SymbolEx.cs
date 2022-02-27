@@ -12,14 +12,14 @@ internal static class SymbolEx
 			if (!attrs[i].IsNameEqual(attrName) || attrs[i].ConstructorArguments.Length <= ctorParamIndex)
 				continue;
 
-			if (attrs[i].ConstructorArguments[ctorParamIndex].Value is T tValue)
+			switch (attrs[i].ConstructorArguments[ctorParamIndex].Value)
 			{
-				value = tValue;
-				return true;
+				case null:
+					return true;
+				case T tValue:
+					value = tValue;
+					return true;
 			}
-
-			if (Nullable.GetUnderlyingType(typeof(T)) != null)
-				return true;
 
 			break;
 		}

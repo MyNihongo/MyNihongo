@@ -101,12 +101,12 @@ internal sealed class KanjiMigration : IMigrationInternal
 		migration.Create.Table(tblName)
 			.WithColumn(UserEntry.UserId).AsInt64().NotNullable().ForeignKey(Core.User, User.UserId)
 			.WithColumn(UserEntry.KanjiId).AsInt16().NotNullable().ForeignKey(Kanji.MasterData, MasterData.KanjiId)
-			.WithColumn(UserEntry.FavouriteRating).AsByte().NotNullable().WithDefaultValue(false)
+			.WithColumn(UserEntry.FavouriteRating).AsByte().NotNullable().WithDefaultValue(0)
 			.WithColumn(UserEntry.Notes).AsString(int.MaxValue).NotNullable().WithDefaultValue(string.Empty)
 			.WithColumn(UserEntry.Mark).AsByte().NotNullable().WithDefaultValue(0)
 			.WithColumn(UserEntry.IsDeleted).AsBoolean().NotNullable().WithDefaultValue(false)
 			.WithColumn(UserEntry.TicksLastAccessed).AsInt64().NotNullable().WithDefaultValue(0)
-			.WithColumn(UserEntry.TicksModified).AsInt64().NotNullable().WithDefaultValue(0);
+			.WithColumn(UserEntry.TicksModified).AsInt64().NotNullable();
 
 		migration.Create.PrimaryKey()
 			.OnTable(tblName)

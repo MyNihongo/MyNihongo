@@ -15,8 +15,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Protobuf Include="..\..\..\proto\enums\**\*.proto" GrpcServices="None">
-			<Link>Protos\%(RecursiveDir)%(FileName)%(Extension)</Link>
+		<Protobuf Include="..\..\..\proto\core\**\*.proto" GrpcServices="None">
+			<Link>Proto\%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Protobuf>
 	</ItemGroup>
 

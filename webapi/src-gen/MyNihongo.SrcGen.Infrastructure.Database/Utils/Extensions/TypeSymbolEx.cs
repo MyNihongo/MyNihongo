@@ -51,15 +51,14 @@ internal static class TypeSymbolEx
 
 		if (@this.NullableAnnotation == NullableAnnotation.Annotated)
 		{
-			var underlyingType = (INamedTypeSymbol)namedType.TypeArguments[0];
-			
-			return underlyingType.EnumUnderlyingType != null
-				? $"EnumValue<{underlyingType.Name}?>"
-				: $"NullableValue<{underlyingType}>";
-		}
-		if (namedType.EnumUnderlyingType != null)
-		{
-			return $"EnumValue<{@this.Name}>";
+			if (namedType.TypeArguments.Length > 0)
+			{
+				var underlyingType = (INamedTypeSymbol)namedType.TypeArguments[0];
+				return $"NullableStruct<{underlyingType}>";
+			}
+
+			var typeString = @this.ToString().Replace("?", string.Empty);
+			return $"NullableRef<{typeString}>";
 		}
 
 		return @this.Name;

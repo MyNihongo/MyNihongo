@@ -1,8 +1,8 @@
 ﻿namespace MyNihongo.Tests.Integration;
 
 public abstract class IntegrationTestsBase<TSnapshot, TConnection> : IClassFixture<TSnapshot>
-	where TSnapshot : SnapshotClassFixture<TConnection>
-	where TConnection : DatabaseCollectionFixture
+	where TSnapshot : DatabaseSnapshotFixture<TConnection>
+	where TConnection : DatabaseFixture
 {
 	protected IntegrationTestsBase(TSnapshot snapshot)
 	{
@@ -11,5 +11,8 @@ public abstract class IntegrationTestsBase<TSnapshot, TConnection> : IClassFixtu
 
 	public TSnapshot Snapshot { get; }
 
-	public IConfiguration Configuration => Snapshot.Configuration;
+	public IConfiguration Configuration => Snapshot.DatabaseFixture.Configuration;
+
+	public DatabaseConnection OpenConnection() =>
+		Snapshot.DatabaseFixture.OpenConnection();
 }

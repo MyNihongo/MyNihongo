@@ -1,0 +1,5 @@
+﻿{
+	"FavouriteRating": 0.0,
+	"Notes": "",
+	"Mark": 0
+}

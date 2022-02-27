@@ -1,0 +1,35 @@
+﻿{
+	"Character": "説",
+	"JlptLevel": "N4",
+	"UserData": {
+		"FavouriteRating": 5.0,
+		"Mark": 23,
+		"Notes": "some user notes"
+	},
+	"Readings": [
+		{
+			"ReadingType": "On",
+			"MainText": "セツ",
+			"SecondaryText": "",
+			"RomajiText": "setsu"
+		},
+		{
+			"ReadingType": "Kun",
+			"MainText": "と",
+			"SecondaryText": "く",
+			"RomajiText": "toku"
+		},
+		{
+			"ReadingType": "On",
+			"MainText": "ゼイ",
+			"SecondaryText": "",
+			"RomajiText": "zei"
+		}
+	],
+	"Meanings": [
+		"opinion",
+		"theory",
+		"explanation",
+		"rumor"
+	]
+}

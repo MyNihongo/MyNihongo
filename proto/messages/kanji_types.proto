@@ -3,8 +3,9 @@ syntax = "proto3";
 option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Kanji";
 
 package kanji;
-import "enums/kanji_enums.proto";
-import "enums/system_enums.proto";
+import "core/kanji_enums.proto";
+import "core/system_enums.proto";
+import "core/optional_types.proto";
 
 message KanjiReading {
 	.kanji.KanjiReadingType readingType = 1;
@@ -41,4 +42,54 @@ message KanjiGetListResponse {
 	message UserData {
 		double favouriteRating = 1;
 	}
+}
+
+// GetDetail
+message KanjiGetDetailRequest {
+	int32 kanjiId = 1;
+	.system.Language language = 2;
+}
+
+message KanjiGetDetailResponse {
+	string character = 1;
+	.system.JlptLevel jlptLevel = 2;
+	UserData userData = 3;
+	repeated KanjiReading readings = 4;
+	repeated string meanings = 5;
+
+	message UserData {
+		double favouriteRating = 1;
+		int32 mark = 2;
+		string notes = 3;
+	}
+}
+
+// UserAdd
+message KanjiUserAddRequest {
+	int32 kanjiId = 1;
+}
+
+message KanjiUserAddResponse {
+	double favouriteRating = 1;
+	string notes = 2;
+	int32 mark = 3;
+}
+
+// UserRemove
+message KanjiUserRemoveRequest {
+	int32 kanjiId = 1;
+}
+
+message KanjiUserRemoveResponse {
+}
+
+// UserSet
+message KanjiUserSetRequest {
+	int32 kanjiId = 1;
+	.system.DoubleOptional favouriteRating = 2;
+	.system.StringOptional notes = 3;
+	.system.Int32Optional mark = 4;
+}
+
+message KanjiUserSetResponse {
 }

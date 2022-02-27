@@ -13,6 +13,7 @@
 		@pageIndex = 0,
 		@pageSize = 35
 */
+
 IF (OBJECT_ID('spKanjiQueryByText') IS NOT NULL)
 	DROP PROCEDURE spKanjiQueryByText
 GO

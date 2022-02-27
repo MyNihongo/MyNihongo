@@ -2,8 +2,8 @@
 
 internal abstract record PaginationBaseParams
 {
-	private readonly int _pageIndex,
-		_pageSize;
+	private const int PageSizeCeiling = 35;
+	private readonly int _pageIndex, _pageSize = PageSizeCeiling;
 
 	[Param("pageIndex")]
 	public int PageIndex
@@ -26,10 +26,10 @@ internal abstract record PaginationBaseParams
 		get => _pageSize;
 		init
 		{
-			const int floor = 10, ceiling = 35;
+			const int floor = 10;
 
-			if (value is < floor or > ceiling)
-				value = ceiling;
+			if (value is < floor or > PageSizeCeiling)
+				value = PageSizeCeiling;
 
 			_pageSize = value;
 		}

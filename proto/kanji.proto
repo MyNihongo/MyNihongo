@@ -7,4 +7,8 @@ import "messages/kanji_types.proto";
 
 service KanjiRpc {
 	rpc GetList (.kanji.KanjiGetListRequest) returns (stream .kanji.KanjiGetListResponse);
+	rpc GetDetail(.kanji.KanjiGetDetailRequest) returns (.kanji.KanjiGetDetailResponse);
+	rpc UserAdd(.kanji.KanjiUserAddRequest) returns (.kanji.KanjiUserAddResponse);
+	rpc UserRemove(.kanji.KanjiUserRemoveRequest) returns (.kanji.KanjiUserRemoveResponse);
+	rpc UserSet(.kanji.KanjiUserSetRequest) returns (.kanji.KanjiUserSetResponse);
 }

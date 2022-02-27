@@ -1,0 +1,22 @@
+﻿{
+	"Character": "猫",
+	"JlptLevel": "N3",
+	"UserData": null,
+	"Readings": [
+		{
+			"ReadingType": "Kun",
+			"MainText": "ねこ",
+			"SecondaryText": "",
+			"RomajiText": "neko"
+		},
+		{
+			"ReadingType": "On",
+			"MainText": "ビョウ",
+			"SecondaryText": "",
+			"RomajiText": "byou"
+		}
+	],
+	"Meanings": [
+		"cat"
+	]
+}

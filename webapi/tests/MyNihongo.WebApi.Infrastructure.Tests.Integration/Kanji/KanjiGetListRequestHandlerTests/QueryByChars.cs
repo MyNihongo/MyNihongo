@@ -1,6 +1,6 @@
 ﻿namespace MyNihongo.WebApi.Infrastructure.Tests.Integration.Kanji.KanjiGetListRequestHandlerTests;
 
-[Collection(CollectionDefinitions.Kanji)]
+[Collection(KanjiCollection.Name), UsesVerify]
 public sealed class QueryByChars : KanjiGetListRequestHandlerTestsBase
 {
 	public QueryByChars(KanjiDatabaseSnapshot snapshot)
@@ -11,54 +11,51 @@ public sealed class QueryByChars : KanjiGetListRequestHandlerTestsBase
 	[Fact]
 	public async Task QueryKanjiIgnoreText()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "夏romaji飲ひらがな願カタカナ餓 針"
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task QueryUser()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "休説歩",
 			UserId = 1L
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterByJlptLevel()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "説八歩",
 			JlptLevel = JlptLevel.N5
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterUserEntries()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "飲夏餓説亜",
 			Filter = KanjiGetListRequest.Types.Filter.UserData,
@@ -66,16 +63,15 @@ public sealed class QueryByChars : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterUserEntriesAndJlptLevel()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "飲夏餓説亜休八",
 			JlptLevel = JlptLevel.N4,
@@ -84,16 +80,15 @@ public sealed class QueryByChars : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterFavourites()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "元夏説飲癖",
 			Filter = KanjiGetListRequest.Types.Filter.Favourites,
@@ -101,16 +96,15 @@ public sealed class QueryByChars : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterFavouritesAndJlptLevel()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "元夏説亜飲願癖",
 			JlptLevel = JlptLevel.N4,
@@ -119,57 +113,53 @@ public sealed class QueryByChars : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task QueryFrench()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "個夏",
 			Language = Language.French
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task QuerySpanish()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "個夏",
 			Language = Language.Spanish
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task QueryPortuguese()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "個夏",
 			Language = Language.Portuguese
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 }

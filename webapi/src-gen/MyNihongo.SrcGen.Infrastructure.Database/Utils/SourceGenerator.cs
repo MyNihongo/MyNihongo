@@ -168,7 +168,12 @@ internal static class SourceGenerator
 		{
 			var value = "parameters." + prop.Name;
 			if (prop.Type.NullableAnnotation == NullableAnnotation.Annotated)
-				value = value + ".HasValue ? " + value + ".Value : DBNull.Value";
+			{
+				if (prop.Type.IsReferenceType)
+					value = value + " != null ? " + value + " : DBNull.Value";
+				else
+					value = value + ".HasValue ? " + value + ".Value : DBNull.Value";
+			}
 
 			stringBuilder
 				.Indent(indent).AppendFormat("{0}.Parameters.AddWithValue(\"{1}\", {2});", CommandVar, paramName, value)
@@ -180,9 +185,11 @@ internal static class SourceGenerator
 		switch (method.ExecType)
 		{
 			case ExecType.Query:
-				GenerateQueryList(stringBuilder, method, indent);
+				GenerateQueryList(stringBuilder, method, indent, "yield return");
 				break;
-			case ExecType.QueryFirst: break;
+			case ExecType.QueryFirst:
+				GenerateQueryFirst(stringBuilder, method, indent);
+				break;
 			case ExecType.Execute:
 				GenerateExecute(stringBuilder, indent);
 				break;
@@ -195,7 +202,7 @@ internal static class SourceGenerator
 			.Indent(--indent).AppendLine("}");
 	}
 
-	private static void GenerateQueryList(in StringBuilder stringBuilder, MethodDeclarationRecord method, int indent)
+	private static void GenerateQueryList(in StringBuilder stringBuilder, in MethodDeclarationRecord method, int indent, in string returnKeyword)
 	{
 		stringBuilder
 			.Indent(indent++).AppendFormat("await using var {0} = await {1}.ExecuteReaderAsync(ct)", ReaderVar, CommandVar).AppendLine()
@@ -213,7 +220,7 @@ internal static class SourceGenerator
 			if (keyProperty != null)
 			{
 				stringBuilder
-					.Indent(indent).AppendFormat("var grouping{0} = new LookUp<{1}, {2}>();", propertyName, keyProperty.Type, type.Type.GetNestedName())
+					.Indent(indent).AppendFormat("var grouping{0} = new LookUp<{1}, {2}>();", propertyName, keyProperty.Type, type.Value.GetNestedName())
 					.AppendLine();
 			}
 
@@ -243,7 +250,7 @@ internal static class SourceGenerator
 			else
 			{
 				stringBuilder
-					.Indent(indent).Append("yield return ")
+					.Indent(indent).Append(returnKeyword).Append(' ')
 					.Append(decl).AppendLine(";");
 			}
 
@@ -256,6 +263,20 @@ internal static class SourceGenerator
 					.Indent(--indent).AppendLine("}");
 			}
 		}
+	}
+
+	private static void GenerateQueryFirst(in StringBuilder stringBuilder, in MethodDeclarationRecord method, int indent)
+	{
+		GenerateQueryList(stringBuilder, method, indent, "return");
+
+		var returnTypeName = method.TryGetReturnTypeName();
+
+		if (returnTypeName == null)
+			return;
+
+		stringBuilder
+			.AppendLine()
+			.Indent(indent).AppendFormat("return new {0}();", returnTypeName).AppendLine();
 	}
 
 	private static void GenerateExecute(in StringBuilder stringBuilder, int indent)
@@ -336,11 +357,11 @@ internal static class SourceGenerator
 		var varsBuilder = new StringBuilder();
 
 		var declBuilder = new StringBuilder()
-			.AppendFormat("new {0}", type.Type.GetNestedName()).AppendLine()
+			.AppendFormat("new {0}", type.Value.GetNestedName()).AppendLine()
 			.Indent(indent++).AppendLine("{");
 
 		int index = 0, fieldIndex = 0;
-		foreach (var prop in type.Type.GetProperties(static x => x.DeclaredAccessibility == Accessibility.Public))
+		foreach (var prop in type.Value.GetProperties(static x => x.DeclaredAccessibility == Accessibility.Public))
 		{
 			if (index != 0)
 				declBuilder.AppendLine(",");

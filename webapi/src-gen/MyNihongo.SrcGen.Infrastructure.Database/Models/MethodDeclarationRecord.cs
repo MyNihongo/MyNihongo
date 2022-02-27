@@ -34,9 +34,9 @@ internal sealed record MethodDeclarationRecord(INamedTypeSymbol ParamsType)
 		public IPropertySymbol? KeyProperty { get; } = KeyProperty;
 	}
 
-	public sealed record ResultType(INamedTypeSymbol Type, IReadOnlyDictionary<string, string> Keys)
+	public sealed record ResultType(INamedTypeSymbol Value, IReadOnlyDictionary<string, string> Keys)
 	{
-		public INamedTypeSymbol Type { get; } = Type;
+		public INamedTypeSymbol Value { get; } = Value;
 
 		public IReadOnlyDictionary<string, string> Keys { get; } = Keys;
 	}

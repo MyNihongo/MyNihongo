@@ -1,0 +1,34 @@
+﻿{
+	"Character": "夏",
+	"JlptLevel": "N4",
+	"UserData": null,
+	"Readings": [
+		{
+			"ReadingType": "On",
+			"MainText": "カ",
+			"SecondaryText": "",
+			"RomajiText": "ka"
+		},
+		{
+			"ReadingType": "Kun",
+			"MainText": "なつ",
+			"SecondaryText": "",
+			"RomajiText": "natsu"
+		},
+		{
+			"ReadingType": "On",
+			"MainText": "ガ",
+			"SecondaryText": "",
+			"RomajiText": "ga"
+		},
+		{
+			"ReadingType": "On",
+			"MainText": "ゲ",
+			"SecondaryText": "",
+			"RomajiText": "ge"
+		}
+	],
+	"Meanings": [
+		"summer"
+	]
+}

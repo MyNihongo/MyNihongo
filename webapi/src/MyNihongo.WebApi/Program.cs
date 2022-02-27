@@ -1,4 +1,4 @@
-using MyNihongo.WebApi.Infrastructure.Utils.ServiceRegistration;
+using MyNihongo.WebApi.Infrastructure.ServiceRegistration;
 using MyNihongo.WebApi.Utils.ServiceRegistration;
 
 var builder = WebApplication.CreateBuilder(args);

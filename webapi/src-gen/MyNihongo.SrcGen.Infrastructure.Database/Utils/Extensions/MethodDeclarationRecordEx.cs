@@ -1,4 +1,5 @@
-﻿using MyNihongo.SrcGen.Infrastructure.Database.Models;
+﻿using MyNihongo.SrcGen.Infrastructure.Database.Enums;
+using MyNihongo.SrcGen.Infrastructure.Database.Models;
 
 namespace MyNihongo.SrcGen.Infrastructure.Database.Utils.Extensions;
 
@@ -15,7 +16,7 @@ internal static class MethodDeclarationRecordEx
 		const string asyncSuffix = "Async";
 
 		var stringBuilder = new StringBuilder()
-			.Append(CreateReturnType(@this.Results))
+			.Append(CreateReturnType(@this))
 			.AppendFormat(" {0}", methodName);
 
 		if (!methodName.EndsWith(asyncSuffix))
@@ -27,15 +28,20 @@ internal static class MethodDeclarationRecordEx
 
 		return true;
 
-		static string CreateReturnType(IReadOnlyList<MethodDeclarationRecord.Result> returnTypes)
+		static string CreateReturnType(MethodDeclarationRecord @this)
 		{
-			if (returnTypes.Count == 0)
-				return "Task";
-			if (returnTypes.Count == 1)
-				return $"Task<{returnTypes[0].Type.Type.Name}>";
+			switch (@this.ExecType)
+			{
+				case ExecType.Query:
+					return $"IAsyncEnumerable<{GetReturnTypeName(@this)}>";
+				case ExecType.QueryFirst:
+					return $"Task<{GetReturnTypeName(@this)}>";
+				case ExecType.Execute:
+					return "Task";
+			}
 
-			var itemType = returnTypes[returnTypes.Count - 1].Type.Type.Name;
-			return $"IAsyncEnumerable<{itemType}>";
+			// return something stupid so that the compiler warns us
+			return "void";
 		}
 
 		static bool TryGetMethodName(string storedProcedureName, out string value)
@@ -53,4 +59,12 @@ internal static class MethodDeclarationRecordEx
 			return false;
 		}
 	}
+
+	public static string? TryGetReturnTypeName(this MethodDeclarationRecord @this) =>
+		@this.Results.Count > 0
+			? @this.GetReturnTypeName()
+			: null;
+
+	private static string GetReturnTypeName(this MethodDeclarationRecord @this) =>
+		@this.Results[@this.Results.Count - 1].Type.Value.Name;
 }

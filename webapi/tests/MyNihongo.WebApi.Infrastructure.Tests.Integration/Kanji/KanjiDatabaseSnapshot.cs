@@ -1,8 +1,8 @@
 ﻿namespace MyNihongo.WebApi.Infrastructure.Tests.Integration.Kanji;
 
-public sealed class KanjiDatabaseSnapshot : SnapshotClassFixture<KanjiDatabaseFixture>
+public sealed class KanjiDatabaseSnapshot : DatabaseSnapshotFixture<KanjiDatabase>
 {
-	public KanjiDatabaseSnapshot(KanjiDatabaseFixture databaseCollectionFixture)
+	public KanjiDatabaseSnapshot(KanjiDatabase databaseCollectionFixture)
 		: base(databaseCollectionFixture)
 	{
 	}

@@ -36,7 +36,8 @@ using MyNihongo.Database.Abstractions;
 		new PackageIdentity("Google.Protobuf", "3.19.4"),
 		new PackageIdentity("Microsoft.Data.SqlClient", "4.1.0"),
 		new PackageIdentity("Microsoft.Extensions.Configuration.Abstractions", "6.0.0"),
-		new PackageIdentity("MediatR.Extensions.Microsoft.DependencyInjection", "10.0.1")
+		new PackageIdentity("MediatR.Extensions.Microsoft.DependencyInjection", "10.0.1"),
+		new PackageIdentity("NodaTime", "3.0.9")
 	);
 
 	private static readonly ImmutableArray<string> Projects = ImmutableArray.Create(

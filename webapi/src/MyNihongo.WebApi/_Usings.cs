@@ -1,3 +1,3 @@
-﻿global using MyNihongo.WebApi.Infrastructure;
+﻿global using Grpc.Core;
 global using MediatR;
-global using Grpc.Core;
+global using Microsoft.AspNetCore.Authorization;

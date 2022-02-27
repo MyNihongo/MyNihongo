@@ -1,6 +1,6 @@
 ﻿namespace MyNihongo.WebApi.Infrastructure.Tests.Integration.Kanji.KanjiGetListRequestHandlerTests;
 
-[Collection(CollectionDefinitions.Kanji)]
+[Collection(KanjiCollection.Name), UsesVerify]
 public sealed class QueryByText : KanjiGetListRequestHandlerTestsBase
 {
 	public QueryByText(KanjiDatabaseSnapshot snapshot)
@@ -11,79 +11,75 @@ public sealed class QueryByText : KanjiGetListRequestHandlerTestsBase
 	[Fact]
 	public async Task QueryByLanguageAndRomaji()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "ba"
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task QueryByKana()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "ば"
 		};
 
 		var result1 = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleAsync(req);
 
-		request.SearchText = "バ";
+		req.SearchText = "バ";
 
 		var result2 = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleAsync(req);
 
 		result1
 			.Should()
 			.BeEquivalentTo(result2);
 
-		ObjectApprovals.VerifyJson(result1);
+		var result = result2.GetJson();
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task QueryByLanguage()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "été",
 			Language = Language.French
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterByJlptLevel()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "ho",
 			JlptLevel = JlptLevel.N5
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterByUserData()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "ya",
 			Filter = KanjiGetListRequest.Types.Filter.UserData,
@@ -91,16 +87,15 @@ public sealed class QueryByText : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterByUserDataAndJlptLevel()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "gan",
 			JlptLevel = JlptLevel.N3,
@@ -109,16 +104,15 @@ public sealed class QueryByText : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterByFavourites()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "opini",
 			Filter = KanjiGetListRequest.Types.Filter.Favourites,
@@ -126,16 +120,15 @@ public sealed class QueryByText : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleJsonAsync(req);
 
-		ObjectApprovals.VerifyJson(result);
+		await Verify(result);
 	}
 
 	[Fact]
 	public async Task FilterByFavouritesAndJlptLevel()
 	{
-		var request = new KanjiGetListRequest
+		var req = new KanjiGetListRequest
 		{
 			SearchText = "opini",
 			JlptLevel = JlptLevel.N5,
@@ -144,8 +137,7 @@ public sealed class QueryByText : KanjiGetListRequestHandlerTestsBase
 		};
 
 		var result = await CreateFixture()
-			.Handle(request, CancellationToken.None)
-			.ToArrayAsync();
+			.HandleAsync(req);
 
 		result
 			.Should()

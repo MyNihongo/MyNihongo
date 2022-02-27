@@ -1,6 +1,6 @@
 ﻿namespace MyNihongo.WebApi.Infrastructure.Kanji;
 
-[StoredProcedureContext("spKanjiQueryByText", typeof(IAsyncEnumerable<KanjiGetListDatabaseRecord>))]
+[StoredProcedureContext("spKanjiQueryByText", typeof(IAsyncEnumerable<KanjiGetListResult>))]
 internal sealed record KanjiGetListByTextParams : KanjiGetListBaseParams
 {
 	[Param("text")]
