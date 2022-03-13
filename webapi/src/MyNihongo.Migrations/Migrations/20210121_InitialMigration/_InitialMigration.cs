@@ -11,6 +11,7 @@ public sealed class InitialMigration : Migration
 	{
 		_migrations = ImmutableArray.Create<IMigrationInternal>(
 			new CoreMigration(),
+			new AuthMigration(),
 			new KanjiMigration()
 		);
 	}

@@ -27,6 +27,8 @@ internal static class MethodDeclarationCreator
 				goto Next;
 			}
 
+			var isNullableReturnType = typeSymbol.GetAttrValue(GeneratorConst.StoredProcedureContextAttributeName, GeneratorConst.IsNullableProp, false);
+
 			var paramsList = new List<MethodDeclarationRecord.Parameter>();
 			var tempTableList = new List<MethodDeclarationRecord.Parameter>();
 			foreach (var prop in typeSymbol.GetProperties(static x => x.SetMethod != null))
@@ -39,7 +41,7 @@ internal static class MethodDeclarationCreator
 						continue;
 					}
 
-					ctx.ReportError($"Cannot find the stored procedure property name for `{prop.Name}`", prop);
+					ctx.ReportError($"Attribute [{GeneratorConst.ParamAttributeName}] is missing for `{prop.Name}`", prop);
 					goto Next;
 				}
 
@@ -85,6 +87,7 @@ internal static class MethodDeclarationCreator
 			{
 				StoredProcedureName = storedProcedureName,
 				ExecType = GetExecType(returnType),
+				IsNullableReturnType = isNullableReturnType,
 				Parameters = paramsList,
 				TempTables = tempTableList,
 				Results = resultList

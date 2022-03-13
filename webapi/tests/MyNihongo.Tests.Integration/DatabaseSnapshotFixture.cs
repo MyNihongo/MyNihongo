@@ -8,7 +8,10 @@ public abstract class DatabaseSnapshotFixture<T> : IDisposable
 		DatabaseFixture = databaseFixture;
 	}
 
-	internal T DatabaseFixture { get; }
+	protected internal T DatabaseFixture { get; }
+
+	public DatabaseConnection OpenConnection() =>
+		DatabaseFixture.OpenConnection();
 
 	public void Dispose()
 	{

@@ -1,5 +1,6 @@
 ﻿global using FluentAssertions;
 global using LinqToDB;
+global using Microsoft.Extensions.Configuration;
 global using Moq;
 global using MyNihongo.Tests.Integration;
 global using MyNihongo.WebApi.Infrastructure.Kanji;

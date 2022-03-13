@@ -30,7 +30,8 @@ using MyNihongo.Database.Abstractions;
 
 	private static readonly string[] ImplicitUsings = { "System", "System.Linq", "System.Collections.Generic", "System.Threading", "System.Threading.Tasks" },
 		ProtoDirs = { "enums", "messages" },
-		UtilsDirs = { "Collections", "Extensions" };
+		UtilsDirs = { "Collections", "Extensions" },
+		GeneratorDirs = { "Database", "Extensions" };
 
 	private static readonly ImmutableArray<PackageIdentity> NuGetPackages = ImmutableArray.Create(
 		new PackageIdentity("Google.Protobuf", "3.19.4"),
@@ -44,7 +45,7 @@ using MyNihongo.Database.Abstractions;
 		"MyNihongo.Database.Abstractions"
 	);
 
-	protected static async Task VerifyGeneratorAsync(GeneratorKey key, string expected)
+	protected static async Task VerifyGeneratorAsync(GeneratorKey key)
 	{
 		const string expectedAttrs = TestUsings +
 @"namespace MyNihongo.WebApi.Infrastructure;
@@ -54,6 +55,8 @@ using MyNihongo.Database.Abstractions;
 internal sealed class StoredProcedureContextAttribute : Attribute
 {
 	public StoredProcedureContextAttribute(string storedProcedureName, Type? returnType) { }
+
+	public bool IsNullable { get; set; }
 }
 
 [AttributeUsage(AttributeTargets.Property)]
@@ -82,6 +85,9 @@ internal static class ServiceCollectionForDatabaseEx
 			.AddSingleton<{key}.I{key}DatabaseService, {key}.{key}DatabaseService>();
 }}
 ";
+
+		var expected = await ResultUtils.LoadExpectedAsync(key, TestUsings)
+			.ConfigureAwait(false);
 
 		var runner = new GeneratorRunner
 		{
@@ -148,18 +154,20 @@ internal static class ServiceCollectionForDatabaseEx
 			yield return file;
 
 		// Files for tests
-		resourcePath = Path.Combine(path, key.ToString(), "Database");
-		await foreach (var file in LoadFilesAsync(resourcePath))
+		resourcePath = Path.Combine(path, key.ToString());
+		await foreach (var file in LoadFilesAsync(resourcePath, GeneratorDirs))
 			yield return file;
 	}
 
-	private static async IAsyncEnumerable<(string, SourceText)> LoadFilesAsync(string path, string[] dirs)
+	private static async IAsyncEnumerable<(string, SourceText)> LoadFilesAsync(string path, IEnumerable<string> dirs)
 	{
-		foreach (var protoDir in dirs)
+		foreach (var dir in dirs)
 		{
-			var protoPath = Path.Combine(path, protoDir);
+			var finalDir = Path.Combine(path, dir);
+			if (!Directory.Exists(finalDir))
+				continue;
 			
-			await foreach (var file in LoadFilesAsync(protoPath))
+			await foreach (var file in LoadFilesAsync(finalDir))
 				yield return file;
 		}
 	}

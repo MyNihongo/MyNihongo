@@ -21,7 +21,8 @@ internal static class SourceGenerator
 			interfaceName = $"I{className}";
 
 		var stringBuilder = new StringBuilder()
-			.AppendNamespace(@this, groupKey);
+			.AppendNamespace(@this, groupKey)
+			.AppendLine("#nullable enable");
 
 		// Interface
 		stringBuilder
@@ -57,7 +58,10 @@ internal static class SourceGenerator
 			GenerateClassMethod(stringBuilder, indent, methodDeclarations[i], groupKey, ctx);
 		}
 
-		stringBuilder.AppendLine("}");
+		stringBuilder
+			.AppendLine("}")
+			.AppendLine("#nullable disable");
+
 		return new SourceGenerationResult(groupKey, className, stringBuilder.ToString());
 	}
 
@@ -276,7 +280,15 @@ internal static class SourceGenerator
 
 		stringBuilder
 			.AppendLine()
-			.Indent(indent).AppendFormat("return new {0}();", returnTypeName).AppendLine();
+			.Indent(indent);
+
+		if (method.IsNullableReturnType)
+			stringBuilder.Append("return null;");
+		else
+			stringBuilder.AppendFormat("return new {0}();", returnTypeName);
+
+		stringBuilder
+			.AppendLine();
 	}
 
 	private static void GenerateExecute(in StringBuilder stringBuilder, int indent)

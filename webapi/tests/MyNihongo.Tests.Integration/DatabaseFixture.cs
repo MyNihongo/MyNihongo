@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DiffEngine;
+using Microsoft.Extensions.DependencyInjection;
 using MyNihongo.Migrations.Resources;
 using MyNihongo.Migrations.Services;
 using MyNihongo.Migrations.Utils;
 using MyNihongo.Tests.Integration.Models.Core;
+using MyNihongo.Tests.Integration.Services;
 using MyNihongo.Tests.Integration.Utils;
 using ThrowawayDb;
 
@@ -13,10 +15,14 @@ public abstract class DatabaseFixture : IDisposable
 	private readonly ThrowawayDatabase _database;
 	private readonly Mock<IConfiguration> _mockConfiguration = new();
 
-	protected DatabaseFixture(Action<DatabaseConnection> prepareData)
+	static DatabaseFixture()
+	{
+		DiffTools.UseOrder(DiffTool.VisualStudio, DiffTool.BeyondCompare);
+	}
+
+	protected DatabaseFixture(Action<DatabaseConnection, IConfiguration> prepareData, Action<IConfigurationMockBuilder>? prepareConfiguration = null)
 	{
 		var localInstance = SqlServerUtils.GetLocalInstance();
-
 		var connectionStringBuilder = new SqlConnectionStringBuilder
 		{
 			DataSource = localInstance,
@@ -31,31 +37,14 @@ public abstract class DatabaseFixture : IDisposable
 			connectionStringBuilder.InitialCatalog = _database.Name;
 			RunMigrations(connectionStringBuilder.ConnectionString);
 
-			_mockConfiguration
-				.SetupConfiguration()
-				.Returns(new
-				{
-					Database = new
-					{
-						DataSource = localInstance,
-						InitialCatalog = _database.Name,
-						Standard = new
-						{
-							User = DatabaseConst.StandardUser,
-							Password = DatabaseConst.DefaultPassword
-						},
-						Auth = new
-						{
-							User = DatabaseConst.AuthUser,
-							Password = DatabaseConst.DefaultPassword
-						}
-					}
-				});
+			var configurationBuilder = new ConfigurationMockBuilder(_mockConfiguration);
+			prepareConfiguration?.Invoke(configurationBuilder);
+			PrepareBaseConfiguration(configurationBuilder, localInstance);
 
 			using (var connection = OpenConnection())
 			{
 				PrepareBaseData(connection);
-				prepareData(connection);
+				prepareData(connection, _mockConfiguration.Object);
 			}
 
 			_database.CreateSnapshot();
@@ -91,6 +80,27 @@ public abstract class DatabaseFixture : IDisposable
 
 		scope.ServiceProvider.GetRequiredService<IMigrationService>()
 			.Migrate();
+	}
+
+	private void PrepareBaseConfiguration(ConfigurationMockBuilder builder, string localInstance)
+	{
+		builder.AppendRootSection("Database", new
+		{
+			DataSource = localInstance,
+			InitialCatalog = _database.Name,
+			Standard = new
+			{
+				User = DatabaseConst.StandardUser,
+				Password = DatabaseConst.DefaultPassword
+			},
+			Auth = new
+			{
+				User = DatabaseConst.AuthUser,
+				Password = DatabaseConst.DefaultPassword
+			}
+		});
+
+		builder.Setup();
 	}
 
 	private static void PrepareBaseData(DatabaseConnection connection)

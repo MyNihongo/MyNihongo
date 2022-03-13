@@ -1,4 +1,5 @@
-﻿using MyNihongo.Tests.Integration.Models.Core;
+﻿using MyNihongo.Tests.Integration.Models.Auth;
+using MyNihongo.Tests.Integration.Models.Core;
 using MyNihongo.Tests.Integration.Models.Kanji;
 
 namespace MyNihongo.Tests.Integration;
@@ -9,6 +10,14 @@ public sealed class DatabaseConnection : DataConnection
 		: base("Microsoft.Data.SqlClient", connectionString)
 	{
 	}
+
+	#region Auth
+
+	public ITable<AuthConnectionDatabaseRecord> Connections => GetTable<AuthConnectionDatabaseRecord>();
+
+	public ITable<AuthConnectionTokenDatabaseRecord> ConnectionTokens => GetTable<AuthConnectionTokenDatabaseRecord>();
+
+	#endregion
 
 	#region Core
 

@@ -35,7 +35,11 @@ internal static class MethodDeclarationRecordEx
 				case ExecType.Query:
 					return $"IAsyncEnumerable<{GetReturnTypeName(@this)}>";
 				case ExecType.QueryFirst:
-					return $"Task<{GetReturnTypeName(@this)}>";
+					var type = GetReturnTypeName(@this);
+					if (@this.IsNullableReturnType)
+						type += '?';
+
+					return $"Task<{type}>";
 				case ExecType.Execute:
 					return "Task";
 			}

@@ -1,6 +1,4 @@
-﻿using MyNihongo.WebApi.Infrastructure.Kanji;
-
-namespace MyNihongo.WebApi.Infrastructure;
+﻿namespace MyNihongo.WebApi.Infrastructure.Kanji;
 
 internal static class EnumerableEx
 {

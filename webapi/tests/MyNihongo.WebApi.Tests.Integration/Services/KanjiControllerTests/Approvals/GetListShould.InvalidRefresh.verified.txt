@@ -1,0 +1,48 @@
+﻿{
+	"payload": [
+		{
+			"KanjiId": 1,
+			"SortingOrder": 1,
+			"Character": "飲",
+			"JlptLevel": "N5",
+			"UserData": null,
+			"Readings": [
+				{
+					"ReadingType": "On",
+					"MainText": "イン",
+					"SecondaryText": "",
+					"RomajiText": "iso"
+				},
+				{
+					"ReadingType": "Kun",
+					"MainText": "の",
+					"SecondaryText": "む",
+					"RomajiText": "nomu"
+				},
+				{
+					"ReadingType": "On",
+					"MainText": "オン",
+					"SecondaryText": "",
+					"RomajiText": "oso"
+				},
+				{
+					"ReadingType": "Kun",
+					"MainText": "の",
+					"SecondaryText": "み",
+					"RomajiText": "nomi"
+				}
+			],
+			"Meanings": [
+				"drink",
+				"smoke",
+				"take"
+			]
+		}
+	],
+	"headers": [
+		{
+			"Key": "set-cookie",
+			"Value": "x-refresh-jw=; HttpOnly; SameSite=None; Secure; Max-Age=0"
+		}
+	]
+}

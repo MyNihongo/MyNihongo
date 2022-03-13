@@ -43,7 +43,7 @@ public static class ObjectApprovals
 		return GetJsonString(obj);
 	}
 
-	private static string GetJsonString(object? obj)
+	internal static string GetJsonString(object? obj)
 	{
 		if (obj == null)
 			return string.Empty;

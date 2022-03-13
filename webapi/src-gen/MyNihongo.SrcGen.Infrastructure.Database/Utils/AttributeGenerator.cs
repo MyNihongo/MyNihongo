@@ -21,6 +21,8 @@ internal static class AttributeGenerator
 			.AppendFormat("internal sealed class {0} : Attribute", stringBuilderContext).AppendLine()
 			.AppendLine("{")
 			.AppendFormat("\tpublic {0}(string storedProcedureName, Type? returnType) {{ }}", stringBuilderContext).AppendLine()
+			.AppendLine()
+			.AppendFormat("\tpublic bool {0} {{ get; set; }}", GeneratorConst.IsNullableProp).AppendLine()
 			.AppendLine("}")
 			.AppendLine();
 

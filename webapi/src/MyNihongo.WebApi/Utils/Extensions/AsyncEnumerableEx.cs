@@ -2,8 +2,11 @@
 
 public static class AsyncEnumerableEx
 {
-	public static async Task WriteTo<T>(this IAsyncEnumerable<T> @this, IServerStreamWriter<T> responseStream, ServerCallContext ctx)
+	public static async Task WriteTo<T>(this IAsyncEnumerable<T>? @this, IServerStreamWriter<T> responseStream, ServerCallContext ctx)
 	{
+		if (@this == null)
+			return;
+
 		await foreach (var res in @this.WithCancellation(ctx.CancellationToken))
 			await responseStream.WriteAsync(res)
 				.ConfigureAwait(false);

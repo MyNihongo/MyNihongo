@@ -6,11 +6,13 @@
 	export let name: string;
 	let output: string = "none so far";
 
-	const client = new KanjiRpcClient("https://localhost:7076");
+	const client = new KanjiRpcClient("https://localhost:7076", null, {
+		'withCredentials': true
+	});
 	const req = new KanjiGetListRequest();
 
 	const onClick = async () => {
-		const stream = client.getList(req, {});
+		const stream = client.getList(req);
 		const res = await readStreamAsync<KanjiGetListResponse>(stream)
 		console.log(res)
 	};

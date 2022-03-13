@@ -10,7 +10,7 @@ public sealed class KanjiDatabase : DatabaseFixture
 	{
 	}
 
-	private static void PrepareData(DatabaseConnection connection)
+	private static void PrepareData(DatabaseConnection connection, IConfiguration configuration)
 	{
 		connection.KanjiMasterData.BulkCopy(new KanjiMasterDataDatabaseRecord[]
 		{

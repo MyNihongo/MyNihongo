@@ -1,5 +1,4 @@
 ﻿using MyNihongo.WebApi.Resources.Const;
-using MyNihongo.WebApi.Services;
 
 namespace MyNihongo.WebApi.Utils.ServiceRegistration;
 
@@ -14,10 +13,19 @@ public static class WebApplicationEx
 	public static void UseWebApiInternal(this IApplicationBuilder @this)
 	{
 		@this.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
+
+		@this.UseHttpsRedirection();
+		@this.UseRouting();
+
 		@this.UseCors();
 
-		@this.UseRouting();
-		@this.UseEndpoints(static x => x.MapGrpcServices());
+		@this.UseAuthentication();
+		@this.UseAuthorization();
+
+		@this.UseEndpoints(static x =>
+		{
+			x.MapGrpcServices();
+		});
 	}
 
 	private static void MapGrpcServices(this IEndpointRouteBuilder @this)

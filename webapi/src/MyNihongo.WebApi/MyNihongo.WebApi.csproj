@@ -7,8 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Grpc.AspNetCore" Version="2.42.0" />
-		<PackageReference Include="Grpc.AspNetCore.Web" Version="2.42.0" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.43.0" />
+		<PackageReference Include="Grpc.AspNetCore.Web" Version="2.43.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
+		<PackageReference Include="MyNihongo.Option" Version="2.0.6" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,6 +21,10 @@
 		<Protobuf Include="..\..\..\proto\*.proto" GrpcServices="Server">
 			<Link>Protos\%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Protobuf>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="*.csproj.DotSettings" />
 	</ItemGroup>
 
 </Project>

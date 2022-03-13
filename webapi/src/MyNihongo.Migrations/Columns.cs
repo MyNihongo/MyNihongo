@@ -18,6 +18,25 @@ public static class Columns
 		}
 	}
 
+	public static class Auth
+	{
+		public static class Connection
+		{
+			public const string ConnectionId = "connectionID",
+				UserId = User.UserId,
+				IpAddress = "ipAddress",
+				ClientInfo = "clientInfo",
+				TicksLatestAccessed = "ticksLatestAccess";
+		}
+
+		public static class ConnectionToken
+		{
+			public const string TokenId = "tokenID",
+				ConnectionId = Connection.ConnectionId,
+				TicksValidTo = "ticksValidTo";
+		}
+	}
+
 	public static class Kanji
 	{
 		public static class MasterData
@@ -56,7 +75,7 @@ public static class Columns
 				Notes = "notes",
 				Mark = "mark",
 				IsDeleted = "isDeleted",
-				TicksLastAccessed = "ticksLastAccessed",
+				TicksLatestAccess = "ticksLatestAccess",
 				TicksModified = "ticksModified";
 		}
 	}

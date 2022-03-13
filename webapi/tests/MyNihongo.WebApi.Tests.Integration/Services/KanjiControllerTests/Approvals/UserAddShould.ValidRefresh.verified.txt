@@ -1,0 +1,17 @@
+﻿{
+	"payload": {
+		"FavouriteRating": 0.0,
+		"Notes": "",
+		"Mark": 0
+	},
+	"headers": [
+		{
+			"Key": "set-cookie",
+			"Value": "x-access-jwt={token value}; HttpOnly; SameSite=None; Secure; Max-Age=900"
+		},
+		{
+			"Key": "set-cookie",
+			"Value": "x-refresh-jw={token value}; HttpOnly; SameSite=None; Secure; Max-Age=15768000"
+		}
+	]
+}

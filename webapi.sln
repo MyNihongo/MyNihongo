@@ -35,7 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.WebApi.Infrastruc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.WebApi.Tests.Integration", "webapi\tests\MyNihongo.WebApi.Tests.Integration\MyNihongo.WebApi.Tests.Integration.csproj", "{F3675F94-335B-4D0C-B555-F37E22B15C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNihongo.Database.Abstractions.Tests", "webapi\tests\MyNihongo.Database.Abstractions.Tests\MyNihongo.Database.Abstractions.Tests.csproj", "{416A44B3-9E8B-4B67-A7E3-CF51154B30F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.Database.Abstractions.Tests", "webapi\tests\MyNihongo.Database.Abstractions.Tests\MyNihongo.Database.Abstractions.Tests.csproj", "{416A44B3-9E8B-4B67-A7E3-CF51154B30F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.WebApi.Tests", "webapi\tests\MyNihongo.WebApi.Tests\MyNihongo.WebApi.Tests.csproj", "{1C7E571A-AAB2-4C4B-AE32-56FB648D19CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNihongo.Tests.GrpcClient", "webapi\tests\MyNihongo.Tests.GrpcClient\MyNihongo.Tests.GrpcClient.csproj", "{CD836800-126D-47FC-831B-ACBD8B731864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +99,14 @@ Global
 		{416A44B3-9E8B-4B67-A7E3-CF51154B30F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{416A44B3-9E8B-4B67-A7E3-CF51154B30F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{416A44B3-9E8B-4B67-A7E3-CF51154B30F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7E571A-AAB2-4C4B-AE32-56FB648D19CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7E571A-AAB2-4C4B-AE32-56FB648D19CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7E571A-AAB2-4C4B-AE32-56FB648D19CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7E571A-AAB2-4C4B-AE32-56FB648D19CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD836800-126D-47FC-831B-ACBD8B731864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD836800-126D-47FC-831B-ACBD8B731864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD836800-126D-47FC-831B-ACBD8B731864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD836800-126D-47FC-831B-ACBD8B731864}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +123,8 @@ Global
 		{AFEA8ECB-19B3-4340-B0CB-CE944B1B46FC} = {6E844C12-4619-4742-8C85-16D6454D66BE}
 		{F3675F94-335B-4D0C-B555-F37E22B15C54} = {64095775-3A2F-4FC7-8B0B-A23412D7D5B9}
 		{416A44B3-9E8B-4B67-A7E3-CF51154B30F7} = {6E844C12-4619-4742-8C85-16D6454D66BE}
+		{1C7E571A-AAB2-4C4B-AE32-56FB648D19CA} = {6E844C12-4619-4742-8C85-16D6454D66BE}
+		{CD836800-126D-47FC-831B-ACBD8B731864} = {64095775-3A2F-4FC7-8B0B-A23412D7D5B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC0FE73C-9381-4701-8272-F0DF1D63784E}

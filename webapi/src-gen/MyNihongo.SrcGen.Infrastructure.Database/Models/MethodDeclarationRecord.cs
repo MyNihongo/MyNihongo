@@ -12,6 +12,8 @@ internal sealed record MethodDeclarationRecord(INamedTypeSymbol ParamsType)
 
 	public string DeclarationString { get; set; } = string.Empty;
 
+	public bool IsNullableReturnType { get; set; }
+
 	public IReadOnlyList<Parameter> Parameters { get; set; } = Array.Empty<Parameter>();
 	
 	public IReadOnlyList<Parameter> TempTables { get; set; } = Array.Empty<Parameter>();

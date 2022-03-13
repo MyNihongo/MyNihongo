@@ -6,4 +6,7 @@ public abstract class KanjiControllerTestsBase : WebApiTestsBase
 		: base(snapshot)
 	{
 	}
+
+	protected KanjiClient CreateFixture() =>
+		new(Snapshot.OpenChannel());
 }

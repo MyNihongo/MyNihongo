@@ -1,0 +1,8 @@
+﻿[
+	{
+		"ConnectionId": "1f125fac-c08e-4424-986d-bba0a04b686d",
+		"UserId": 1,
+		"IpAddress": "",
+		"ClientInfo": "Updated client info"
+	}
+]

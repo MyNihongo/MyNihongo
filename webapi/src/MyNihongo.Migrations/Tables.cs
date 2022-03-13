@@ -8,6 +8,12 @@ public static class Tables
 			User = "tblSysUser";
 	}
 
+	public static class Auth
+	{
+		public const string Connection = "tblAuthConnection",
+			ConnectionToken = "tblAuthConnectionToken";
+	}
+
 	public static class Kanji
 	{
 		public const string MasterData = "tblKanjiMasterData",

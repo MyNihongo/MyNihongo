@@ -5,3 +5,4 @@ global using Moq.Microsoft.Configuration;
 global using MyNihongo.WebApi.Infrastructure.Kanji;
 global using NodaTime;
 global using Xunit;
+global using MyNihongo.WebApi.Infrastructure.Auth;

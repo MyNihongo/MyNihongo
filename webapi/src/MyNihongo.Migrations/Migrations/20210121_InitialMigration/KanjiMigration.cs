@@ -105,7 +105,7 @@ internal sealed class KanjiMigration : IMigrationInternal
 			.WithColumn(UserEntry.Notes).AsString(int.MaxValue).NotNullable().WithDefaultValue(string.Empty)
 			.WithColumn(UserEntry.Mark).AsByte().NotNullable().WithDefaultValue(0)
 			.WithColumn(UserEntry.IsDeleted).AsBoolean().NotNullable().WithDefaultValue(false)
-			.WithColumn(UserEntry.TicksLastAccessed).AsInt64().NotNullable().WithDefaultValue(0)
+			.WithColumn(UserEntry.TicksLatestAccess).AsInt64().NotNullable().WithDefaultValue(0)
 			.WithColumn(UserEntry.TicksModified).AsInt64().NotNullable();
 
 		migration.Create.PrimaryKey()

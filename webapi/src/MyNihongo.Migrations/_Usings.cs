@@ -5,5 +5,6 @@ global using FluentMigrator.SqlServer;
 global using MyNihongo.Database.Abstractions;
 global using MyNihongo.WebApi.Infrastructure;
 global using static MyNihongo.Migrations.Columns.Core;
+global using static MyNihongo.Migrations.Columns.Auth;
 global using static MyNihongo.Migrations.Columns.Kanji;
 global using static MyNihongo.Migrations.Tables;

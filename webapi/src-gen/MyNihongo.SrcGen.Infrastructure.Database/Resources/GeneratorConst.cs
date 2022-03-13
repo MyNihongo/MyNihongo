@@ -6,5 +6,6 @@ internal static class GeneratorConst
 		ParamAttributeName = "Param",
 		ParamTempTableAttributeName = "ParamTempTable";
 
-	public const string CollationProp = "Collation";
+	public const string CollationProp = "Collation",
+		IsNullableProp = "IsNullable";
 }

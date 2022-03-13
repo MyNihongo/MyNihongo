@@ -2,5 +2,6 @@
 
 public enum GeneratorKey
 {
-	Kanji
+	Kanji,
+	Auth
 }

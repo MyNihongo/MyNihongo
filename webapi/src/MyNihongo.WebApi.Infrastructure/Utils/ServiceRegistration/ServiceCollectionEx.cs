@@ -1,4 +1,6 @@
-﻿namespace MyNihongo.WebApi.Infrastructure.ServiceRegistration;
+﻿using MyNihongo.WebApi.Infrastructure.Auth;
+
+namespace MyNihongo.WebApi.Infrastructure.ServiceRegistration;
 
 public static class ServiceCollectionEx
 {
@@ -6,5 +8,6 @@ public static class ServiceCollectionEx
 		@this
 			.AddMediatR(typeof(ServiceCollectionEx).Assembly)
 			.AddSingleton<IClock>(SystemClock.Instance)
+			.AddTransient<IAuthService, AuthService>()
 			.AddDatabaseServices();
 }

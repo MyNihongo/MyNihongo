@@ -21,8 +21,8 @@ public sealed record KanjiUserEntryDatabaseRecord
 	[Column(UserEntry.IsDeleted)]
 	public bool IsDeleted { get; init; }
 
-	[Column(UserEntry.TicksLastAccessed)]
-	public long TicksLastAccessed { get; init; }
+	[Column(UserEntry.TicksLatestAccess)]
+	public long TicksLatestAccess { get; init; }
 
 	[Column(UserEntry.TicksModified)]
 	public long TicksModified { get; init; }

@@ -30,7 +30,7 @@ SELECT
 FROM
     #tmpKanji
     INNER JOIN tblKanjiReading
-    ON tblKanjiReading.kanjiID = #tmpKanji.kanjiID
+        ON tblKanjiReading.kanjiID = #tmpKanji.kanjiID
 ORDER by
     #tmpKanji.kanjiID ASC,
     tblKanjiReading.sorting ASC
@@ -42,7 +42,7 @@ SELECT
 FROM
     #tmpKanji
     INNER JOIN tblKanjiMeaning
-    ON tblKanjiMeaning.kanjiID = #tmpKanji.kanjiID
+        ON tblKanjiMeaning.kanjiID = #tmpKanji.kanjiID
 WHERE
     tblKanjiMeaning.langID = @langID
 ORDER BY
@@ -50,7 +50,6 @@ ORDER BY
     tblKanjiMeaning.sorting ASC
 
 -- Output 3 (MasterData)
-SELECT *
-FROM #tmpKanji
+SELECT * FROM #tmpKanji
 
 GO

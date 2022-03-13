@@ -43,7 +43,7 @@ INTO
 FROM
 	tblKanjiMasterData
 	LEFT JOIN tblKanjiUserEntry
-	ON tblKanjiUserEntry.userID = @userID
+		ON tblKanjiUserEntry.userID = @userID
 		AND tblKanjiUserEntry.kanjiID = tblKanjiMasterData.kanjiID
 		AND tblKanjiUserEntry.isDeleted = 0
 WHERE

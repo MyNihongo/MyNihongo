@@ -73,16 +73,13 @@ BEGIN
 END
 
 -- Delete duplicates
-;
-WITH
-	cte
-	AS
-	(
-		SELECT
-			#tmpKanjiID.kanjiID,
-			ROW_NUMBER() OVER (PARTITION BY #tmpKanjiID.kanjiID ORDER BY #tmpKanjiID.kanjiID) AS rowNumber
-		FROM #tmpKanjiID
-	)
+;WITH cte AS
+(
+	SELECT
+		#tmpKanjiID.kanjiID,
+		ROW_NUMBER() OVER (PARTITION BY #tmpKanjiID.kanjiID ORDER BY #tmpKanjiID.kanjiID) AS rowNumber
+	FROM #tmpKanjiID
+)
 DELETE cte WHERE rowNumber > 1
 
 -------------------------------------------------------------------------------
@@ -101,9 +98,9 @@ INTO
 FROM
 	#tmpKanjiID
 	INNER JOIN tblKanjiMasterData
-	ON tblKanjiMasterData.kanjiID = #tmpKanjiID.kanjiID
+		ON tblKanjiMasterData.kanjiID = #tmpKanjiID.kanjiID
 	LEFT JOIN tblKanjiUserEntry
-	ON tblKanjiUserEntry.userID = @userID
+		ON tblKanjiUserEntry.userID = @userID
 		AND tblKanjiUserEntry.kanjiID = tblKanjiMasterData.kanjiID
 		AND tblKanjiUserEntry.isDeleted = 0
 WHERE

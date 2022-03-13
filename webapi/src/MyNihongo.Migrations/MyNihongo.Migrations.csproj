@@ -10,7 +10,7 @@
 		<PackageReference Include="FluentMigrator" Version="3.3.2" />
 		<PackageReference Include="FluentMigrator.Extensions.SqlServer" Version="3.3.2" />
 		<PackageReference Include="FluentMigrator.Runner" Version="3.3.2" />
-		<PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46521.71" />
+		<PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.47008.0" />
 	</ItemGroup>
 
 	<ItemGroup>

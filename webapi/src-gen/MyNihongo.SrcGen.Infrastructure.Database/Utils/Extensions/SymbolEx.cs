@@ -27,6 +27,11 @@ internal static class SymbolEx
 		return false;
 	}
 
+	public static T GetAttrValue<T>(this ISymbol @this, string attrName, string paramName, T fallbackValue) =>
+		@this.TryGetAttrValue<T>(attrName, paramName, out var value)
+			? value
+			: fallbackValue;
+
 	public static bool TryGetAttrValue<T>(this ISymbol @this, string attrName, string paramName, out T value)
 	{
 		value = default!;
