@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Auth";
+
+package auth;
+
+enum AuthResult {
+	UNDEFINED_AUTH_RESULT = 0;
+	OK = 1;
+	INVALID_EMAIL = 2;
+	PASSWORD_NOT_STRONG = 3;
+	INVALID_CREDENTIALS = 4;
+}

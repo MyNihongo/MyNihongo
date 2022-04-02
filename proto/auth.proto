@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Auth";
+
+package auth;
+import "messages/auth_types.proto";
+
+service AuthRpc {
+	rpc SignIn (.auth.AuthSignInRequest) returns (.auth.AuthSignInResponse);
+	rpc SignUp (.auth.AuthSignUpRequest) returns (.auth.AuthSignUpResponse);
+	rpc ConfirmSignUp (.auth.AuthSignUpConfirmationRequest) returns (.auth.AuthSignUpConfirmationResponse);
+	rpc SignOut (.auth.AuthSignOutRequest) returns (.auth.AuthSignOutResponse);
+}

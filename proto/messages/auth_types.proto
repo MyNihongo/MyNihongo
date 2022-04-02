@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyNihongo.WebApi.Infrastructure.Auth";
+
+package auth;
+import "core/auth_enums.proto";
+
+// SignIn
+message AuthSignInRequest {
+	string email = 1;
+	bytes encryptedPassword = 2;
+}
+
+message AuthSignInResponse {
+	.auth.AuthResult result = 1;
+}
+
+// SignUp
+message AuthSignUpRequest {
+	string email = 1;
+	bytes encryptedPassword = 2;
+}
+
+message AuthSignUpResponse {
+	.auth.AuthResult result = 1;
+}
+
+// SignUpConfirmation
+message AuthSignUpConfirmationRequest {
+	int32 code = 1;
+}
+
+message AuthSignUpConfirmationResponse {
+	bool ok = 1;
+}
+
+// SignOut
+message AuthSignOutRequest {
+}
+
+message AuthSignOutResponse {
+}
