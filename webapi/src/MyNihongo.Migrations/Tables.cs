@@ -21,4 +21,13 @@ public static class Tables
 			Meaning = "tblKanjiMeaning",
 			UserEntry = "tblKanjiUserEntry";
 	}
+
+	public static class Grammar
+	{
+		public const string RuleMasterData = "tblGrammarRuleMasterData",
+			RuleContent = "tblGrammarRuleContent",
+			RuleSearchByKanji = "tblGrammarRuleSearchByKanji",
+			RuleSearchByRomaji = "tblGrammarRuleSearchByRomaji",
+			RuleSearchByLanguage = "tblGrammarRuleSearchByLanguage";
+	}
 }

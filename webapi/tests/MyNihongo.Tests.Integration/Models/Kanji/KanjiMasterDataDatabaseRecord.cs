@@ -3,21 +3,21 @@
 [Table(Tables.Kanji.MasterData)]
 public sealed record KanjiMasterDataDatabaseRecord
 {
-	[Column(MasterData.KanjiId, IsPrimaryKey = true)]
+	[Column(KanjiMasterData.KanjiId, IsPrimaryKey = true)]
 	public short KanjiId { get; init; }
 
-	[Column(MasterData.SortingOrder)]
+	[Column(KanjiMasterData.SortingOrder)]
 	public short SortingOrder { get; init; }
 
-	[Column(MasterData.Character)]
+	[Column(KanjiMasterData.Character)]
 	public char Character { get; init; }
 
-	[Column(MasterData.JlptLevel)]
+	[Column(KanjiMasterData.JlptLevel)]
 	public JlptLevel? JlptLevel { get; init; }
 
-	[Column(MasterData.HashCode)]
+	[Column(KanjiMasterData.HashCode)]
 	public int HashCode { get; init; }
 
-	[Column(MasterData.Timestamp)]
+	[Column(KanjiMasterData.Timestamp)]
 	public long Timestamp { get; init; }
 }

@@ -2,7 +2,7 @@
 
 namespace MyNihongo.Migrations.Migrations;
 
-[TimestampedMigration(2021, 1, 21, 0, 0)]
+[TimestampedMigration(2022, 1, 21, 0, 0)]
 public sealed class InitialMigration : Migration
 {
 	private readonly ImmutableArray<IMigrationInternal> _migrations;
@@ -12,7 +12,8 @@ public sealed class InitialMigration : Migration
 		_migrations = ImmutableArray.Create<IMigrationInternal>(
 			new CoreMigration(),
 			new AuthMigration(),
-			new KanjiMigration()
+			new KanjiMigration(),
+			new GrammarMigration()
 		);
 	}
 
