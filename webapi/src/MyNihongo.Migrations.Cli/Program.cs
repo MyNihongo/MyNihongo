@@ -4,7 +4,7 @@ using MyNihongo.Migrations.Services;
 using MyNihongo.Migrations.Utils;
 
 using var services = new ServiceCollection()
-	.AddMigrator("Server=DAYTON033;Database=my_nihongo;Integrated Security=true;")
+	.AddMigrator("Server=DAYTON033\\SQLEXPRESS;Database=mynihongo;Integrated Security=true;")
 	.AddLogging(static x => x.AddFluentMigratorConsole())
 	.BuildServiceProvider(true);
 
