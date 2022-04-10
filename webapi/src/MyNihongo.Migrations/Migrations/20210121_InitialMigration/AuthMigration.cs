@@ -30,7 +30,7 @@ internal sealed class AuthMigration : IMigrationInternal
 
 		migration.Create.Table(tblName)
 			.WithColumn(Connection.ConnectionId).AsGuid().PrimaryKey()
-			.WithColumn(Connection.UserId).AsInt64().NotNullable().ForeignKey(Core.User, User.UserId)
+			.WithForeignKeyToUser(Connection.UserId)
 			.WithColumn(Connection.IpAddress).AsAnsiString(16).NotNullable()
 			.WithColumn(Connection.ClientInfo).AsString(255).NotNullable()
 			.WithColumn(Connection.TicksLatestAccessed).AsInt64().NotNullable();
@@ -46,7 +46,7 @@ internal sealed class AuthMigration : IMigrationInternal
 
 		migration.Create.Table(tblName)
 			.WithColumn(ConnectionToken.TokenId).AsGuid().PrimaryKey()
-			.WithColumn(ConnectionToken.ConnectionId).AsGuid().NotNullable().ForeignKey(Auth.Connection, Connection.ConnectionId)
+			.WithForeignKeyToConnection(ConnectionToken.ConnectionId)
 			.WithColumn(ConnectionToken.TicksValidTo).AsInt64().NotNullable();
 
 		migration.Create.Index()

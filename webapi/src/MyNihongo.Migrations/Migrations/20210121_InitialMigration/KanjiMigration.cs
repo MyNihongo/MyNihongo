@@ -54,7 +54,7 @@ internal sealed class KanjiMigration : IMigrationInternal
 		const string tblName = Kanji.Reading;
 
 		migration.Create.Table(tblName)
-			.WithColumn(Reading.KanjiId).AsInt16().NotNullable().ForeignKey(Kanji.MasterData, KanjiMasterData.KanjiId).OnDelete(Rule.Cascade)
+			.WithForeignKeyToKanji(Reading.KanjiId)
 			.WithColumn(Reading.MainText).AsString(Collations.KanjiKanaCollation).NotNullable()
 			.WithColumn(Reading.SecondaryText).AsString(Collations.KanjiKanaCollation).NotNullable()
 			.WithColumn(Reading.SortingOrder).AsByte().NotNullable()
@@ -76,8 +76,8 @@ internal sealed class KanjiMigration : IMigrationInternal
 		const string tblName = Kanji.Meaning;
 
 		migration.Create.Table(tblName)
-			.WithColumn(Meaning.KanjiId).AsInt16().NotNullable().ForeignKey(Kanji.MasterData, KanjiMasterData.KanjiId).OnDelete(Rule.Cascade)
-			.WithColumn(Meaning.LanguageId).AsByte().NotNullable().ForeignKey(Core.Lang, Lang.LanguageId)
+			.WithForeignKeyToKanji(Meaning.KanjiId)
+			.WithForeignKeyToLanguage(Meaning.LanguageId)
 			.WithColumn(Meaning.Text).AsString().NotNullable()
 			.WithColumn(Meaning.SortingOrder).AsByte().NotNullable();
 
@@ -96,8 +96,8 @@ internal sealed class KanjiMigration : IMigrationInternal
 		const string tblName = Kanji.UserEntry;
 
 		migration.Create.Table(tblName)
-			.WithColumn(UserEntry.UserId).AsInt64().NotNullable().ForeignKey(Core.User, User.UserId)
-			.WithColumn(UserEntry.KanjiId).AsInt16().NotNullable().ForeignKey(Kanji.MasterData, KanjiMasterData.KanjiId)
+			.WithForeignKeyToUser(UserEntry.UserId)
+			.WithForeignKeyToKanji(UserEntry.KanjiId)
 			.WithColumn(UserEntry.FavouriteRating).AsByte().NotNullable().WithDefaultValue(0)
 			.WithColumn(UserEntry.Notes).AsString(int.MaxValue).NotNullable().WithDefaultValue(string.Empty)
 			.WithColumn(UserEntry.Mark).AsByte().NotNullable().WithDefaultValue(0)
