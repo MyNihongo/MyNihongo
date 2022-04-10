@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Google.Protobuf" Version="3.19.4" />
-		<PackageReference Include="Grpc.Tools" Version="2.44.0">
+		<PackageReference Include="Google.Protobuf" Version="3.20.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.45.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -18,7 +18,7 @@
 		<PackageReference Include="Microsoft.Extensions.ObjectPool" Version="6.0.3" />
 		<PackageReference Include="MyNihongo.KanaConverter" Version="1.0.1" />
 		<PackageReference Include="MyNihongo.KanaDetector" Version="1.0.1.1" />
-		<PackageReference Include="NodaTime" Version="3.0.9" />
+		<PackageReference Include="NodaTime" Version="3.0.10" />
 	</ItemGroup>
 
 	<ItemGroup>
