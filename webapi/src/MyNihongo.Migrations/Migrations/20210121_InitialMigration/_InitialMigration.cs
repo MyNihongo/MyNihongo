@@ -1,6 +1,4 @@
-﻿using MyNihongo.Migrations.Utils.Extensions;
-
-namespace MyNihongo.Migrations.Migrations;
+﻿namespace MyNihongo.Migrations.Migrations;
 
 [TimestampedMigration(2022, 1, 21, 0, 0)]
 public sealed class InitialMigration : Migration

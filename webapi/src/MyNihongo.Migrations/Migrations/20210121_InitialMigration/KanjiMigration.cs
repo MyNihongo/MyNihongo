@@ -1,7 +1,4 @@
-﻿using System.Data;
-using MyNihongo.Migrations.Utils.Extensions;
-
-namespace MyNihongo.Migrations.Migrations;
+﻿namespace MyNihongo.Migrations.Migrations;
 
 internal sealed class KanjiMigration : IMigrationInternal
 {

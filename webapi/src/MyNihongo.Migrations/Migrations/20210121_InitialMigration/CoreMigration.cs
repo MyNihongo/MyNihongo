@@ -1,5 +1,4 @@
 ﻿using MyNihongo.Migrations.Models;
-using MyNihongo.Migrations.Utils.Extensions;
 
 namespace MyNihongo.Migrations.Migrations;
 
